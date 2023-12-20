@@ -13,7 +13,7 @@ html {
  justify-content: center;
  background: linear-gradient(45deg, coral, cornflowerblue);
  /* background: url(zak-boca-w504XUUximQ-unsplash.jpg) no-repeat center; */
- padding: 10%;
+ padding: 5%;
  border: none;
  border-radius: 1rem;
  flex-direction: column;
@@ -21,7 +21,7 @@ html {
 }
 
 .layout-bg-img {
- background: url('/pexels-felix-mittermeier-956999.jpg') no-repeat center;
+ background: url('./pexels-felix-mittermeier-956999.jpg') no-repeat center;
 }
 
 .page-heading {
