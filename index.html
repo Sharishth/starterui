@@ -45,27 +45,22 @@
    <h2>Dropdown</h2>
    <!-- Simple Button -->
   <div class="showitem">
-   <h3>Default Dropdown</h3>
+   <h3>Default Dropdown (Script Required)</h3>
    <div class="item">
-    <!-- <select class="select" name="abc" id="abc" onclick="" >
-     <option class="option" value="#">Option 2</option>
-     <option class="option" value="#" selected>Default Option</option>
-     <option class="option" value="#">Option 3</option>
-     <option class="option" value="#">Option 4</option>
-     <option class="option" value="#">Option 5</option>
-    </select> -->
-    <button class="button dropdown"><span>Default Option</span> <span>▼</span></button>
-    <div class="select-options">
-     <button class="set-select-value" value="Default Option"> Default Option</button>
-     <button class="set-select-value" value="2">Option 2</button>
-     <button class="set-select-value" value="3"> Option 3</button>
+    <div class="dropdown ">
+     <button type="button" onclick="dropdown()" aria-valuetext="" id="dropdownValue">Select Option &blacktriangledown;</button>
+     <div class="options" id="options">
+      <button type="button" class="optionitem" onclick="setOptionValue('Option Value 1')">Option Value 1</button>
+      <button type="button" class="optionitem" onclick="setOptionValue('Option Value 2')">Option Value 2</button>
+      <button type="button" class="optionitem" onclick="setOptionValue('Option Value 3')">Option Value 3</button>
+     </div>
     </div>
-    
+    <input value="no selection by default" type="text" class="showoutputtext" id="showoutputtext" disabled/>
+    </script>
+    </div>
    </div>
   </div>
-  </div>
- </div>
-
- <!-- Dropdown Showcase --> 
+  <!-- Dropdown Showcase End-->
+  </div> 
 </body>
 </html>
