@@ -15,3 +15,17 @@ function setOptionValue(x) {
  console.log(x) //optional
  document.getElementById("showoutputtext").value = x + ' selected' //optional
 }
+
+// checkbox function
+function changeCheckboxValue() {
+ if(document.getElementById("checkbox-mock").ariaValueText == "off") {
+   document.getElementById("checkbox-mock").ariaValueText = "on"
+   // #5fece1
+   document.getElementById("checkbox-mock").style.backgroundColor = "#5fec6b"
+   document.getElementById("checkbox-mock").style.backgroundImage = 'url("icons8-tick.svg")'
+ } else {
+   document.getElementById("checkbox-mock").ariaValueText = "off"
+   document.getElementById("checkbox-mock").style.backgroundColor = "#eee"
+   document.getElementById("checkbox-mock").style.backgroundImage = 'none'
+ }
+}
