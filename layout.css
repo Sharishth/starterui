@@ -65,3 +65,27 @@ html {
 .showoutputtext:disabled {
  color: black;
 }
+
+.mock-card-horizontal {
+ height: 7rem;
+ width: 11rem;
+ background: #eee;
+ border: none;
+ border-radius: 8px;
+}
+
+.mock-card-vertical {
+ height: 11rem;
+ width: 7rem;
+ background: #eee;
+ border: none;
+ border-radius: 8px;
+}
+
+.mock-card-square {
+ height: 7rem;
+ width: 7rem;
+ background-color: #eee;
+ border: none;
+ border-radius: 8px;
+}
