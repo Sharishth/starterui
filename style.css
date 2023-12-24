@@ -6,6 +6,34 @@
  outline: none;
 }
 
+/* height and width rules */
+
+.h-1 {
+ height: 1rem !important;
+}
+
+.w-1 {
+ width: 1rem !important;
+}
+
+.h-2 {
+ height: 2rem !important;
+}
+
+.w-2 {
+ width: 2rem !important;
+}
+
+.h-3 {
+ height: 3rem !important;
+}
+
+.w-3 {
+ width: 3rem !important;
+}
+
+/* increase height and width by same ration */
+
 /* Margin Rules */
 .m-t-0 {
  margin-top: 0;
@@ -92,6 +120,36 @@
 }
 /* Paddin Rules */
 
+/* background color rules */
+
+.bg-eee {
+ background: #eee !important;
+}
+
+/* background color rules */
+
+/* effect rules */
+
+.ease-in-out-scale {
+ transition: all 0.1s ease-in-out;
+}
+
+.ease-in-out-scale:active {
+ outline: none;
+ transform: scale(0.90);
+}
+
+/* effect rules */
+
+/* border rules */
+.border-radius-sm {
+ border-radius: 4px;
+}
+
+.border-radius-m {
+ border-radius: 8px;
+}
+/* border rules */
 
 .outlined {
  outline: 1px solid black;
@@ -101,7 +159,7 @@
  box-shadow: 4px 4px 8px rgba(2, 0, 0, 0.250);
 }
 
-.button {
+button {
  padding: 0.75em 1em;
  border: none;
  border-radius: 0.5em;
@@ -109,11 +167,11 @@
  transition: all 0.1s ease-in-out;
 }
 
-.button:hover {
+button:hover {
  filter: brightness(95%);
 }
 
-.button:active {
+button:active {
  filter: brightness(90%);
  transform: scale(0.95);
 }
@@ -207,4 +265,48 @@
 .dropdown > .options > .optionitem:last-child {
  border-radius: 0rem 0rem 0.5rem 0.5rem;
  border: none !important;
+}
+
+
+input[type="checkbox"] {
+ height: 1rem;
+ width: 1rem;
+ cursor: pointer;
+ transition: all 0.1s ease-in-out;
+ accent-color: lightgreen;
+ border-style: none;
+}
+
+input[type="checkbox"]:active {
+ transform: scale(0.8);
+}
+
+.checkbox-body {
+ height: 1rem;
+ width: 1rem;
+ background-color: #eee;
+ border: none;
+ border-radius: 4px;
+ /* background:url('icons8-tick.svg') no-repeat; */
+ background-position: center !important;
+ background-size: contain !important;
+ background-repeat: no-repeat !important;
+ transition: all 0.1s ease-in-out;
+}
+
+.checkbox-body:active {
+ transform: scale(0.9);
+}
+
+
+.checkbox {
+ height: 1rem;
+ width: 1rem;
+ background-color: #eee;
+ border: none;
+ border-radius: 4px;
+ /* background:url('icons8-tick.svg') no-repeat; */
+ background-position: center !important;
+ background-size: contain !important;
+ background-repeat: no-repeat !important;
 }
