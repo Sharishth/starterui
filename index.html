@@ -1,94 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>s Library</title>
- <link rel="stylesheet" href="layout.css">
- <link rel="stylesheet" href="style.css">
- <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>s Library</title>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
+
 <body class="font-family-system-segoe">
- <div class="showcase">
-  <h1 class="page-heading">Actions</h1>
-  <!-- Button Showcase -->
-  <div class="category">
-   <h2>Buttons</h2>
-   <!-- Simple Button -->
-  <div class="showitem">
-   <h3>Default Button</h3>
-   <div class="item">
-    <button class="button">Button</button>
-   </div>
-  </div>
-  <!-- Button Shadow -->
-  <div class="showitem">
-   <h3>Button Shadow</h3>
-   <div class="item">
-    <button class="button shadow-default">Button</button>
-   </div>
-  </div>
-  <!-- Button Glass -->
-  <div class="showitem">
-   <h3>Glass Button</h3>
-   <div class="item layout-bg-img">
-    <button class="button bg-glass-scheme">Button</button>
-   </div>
-  </div>
-  </div>
+  <div class="showcase">
+    <h1 class="page-heading">Actions</h1>
+    <!-- Button Showcase -->
+    <div class="category">
+      <h2>Buttons</h2>
+      <!-- Simple Button -->
+      <div class="showitem">
+        <h3>Default Button</h3>
+        <div class="item">
+          <button class="button">Button</button>
+        </div>
+      </div>
+      <!-- Button Shadow -->
+      <div class="showitem">
+        <h3>Button Shadow</h3>
+        <div class="item">
+          <button class="button shadow-default">Button</button>
+        </div>
+      </div>
+      <!-- Button Glass -->
+      <div class="showitem">
+        <h3>Glass Button</h3>
+        <div class="item layout-bg-img">
+          <button class="button bg-glass-scheme">Button</button>
+        </div>
+      </div>
+    </div>
 
-  <div class="layout-line-segment m-t-4">
+    <div class="layout-line-segment m-t-4">
 
-  </div>
-  <!-- Dropdown Showcase -->
-  <div class="category m-t-2">
-   <h2>Dropdown</h2>
-   <!-- Simple Button -->
-  <div class="showitem">
-   <h3>Default Dropdown (Script Required)</h3>
-   <div class="item">
-    <div class="dropdown ">
-     <button type="button" onclick="dropdown()" aria-valuetext="" id="dropdownValue">Select Option &blacktriangledown;</button>
-     <div class="options" id="options">
-      <button type="button" class="optionitem" onclick="setOptionValue('Option Value 1')">Option Value 1</button>
-      <button type="button" class="optionitem" onclick="setOptionValue('Option Value 2')">Option Value 2</button>
-      <button type="button" class="optionitem" onclick="setOptionValue('Option Value 3')">Option Value 3</button>
-     </div>
     </div>
-    <input value="no selection by default" type="text" class="showoutputtext" id="showoutputtext" disabled/>
-    </script>
+    <!-- Dropdown Showcase -->
+    <div class="category m-t-2">
+      <h2>Dropdown</h2>
+      <!-- Simple Button -->
+      <div class="showitem">
+        <h3>Default Dropdown (Script Required)</h3>
+        <div class="item">
+          <div class="dropdown ">
+            <button type="button" onclick="dropdown()" aria-valuetext="" id="dropdownValue">Select Option
+              &blacktriangledown;</button>
+            <div class="options" id="options">
+              <button type="button" class="optionitem" onclick="setOptionValue('Option Value 1')">Option Value
+                1</button>
+              <button type="button" class="optionitem" onclick="setOptionValue('Option Value 2')">Option Value
+                2</button>
+              <button type="button" class="optionitem" onclick="setOptionValue('Option Value 3')">Option Value
+                3</button>
+            </div>
+          </div>
+          <input value="no selection by default" type="text" class="showoutputtext" id="showoutputtext" disabled />
+          </script>
+        </div>
+      </div>
     </div>
-   </div>
-  </div>
-  <!-- Dropdown Showcase End-->
-  <div class="category m-t-2">
-   <div class="showitem">
-   <h2>Checkbox</h2>
-   <h3>System default</h3>
-   <div class="item">
-    <input type="checkbox" name="" id="checkboxsystem" onclick="chk('checkboxsystem')" />
-    <input value="empty" type="text" class="showoutputtext" id="showoutcheckboxvalue" disabled/>
-    <script> <!-- Not needed -->
-     function chk(x) {
-      document.getElementById("showoutcheckboxvalue").value = document.getElementById(x).value
-     }
-    </script>
-   </div>
-   <h3>Custom Checkbox</h3>
-   <p>Unlike default input based checkbox custom checkbox is not input based and doesn't have value. Rather it has aria value "on" and "off". Custom checkbox can be styled and interacted with. Same logic can be be used to create switches as well. It starts with default aria-valuetext as "off".</p>
-   <div class="item">
-    <div class="checkbox-body" onclick="checkCheckbox()"> <!--onclick on class checkbox-body element should be ignored for documentation purposes-->
-      <div class="checkbox shadow-default" id="checkbox-mock" onclick="changeCheckboxValue()" aria-valuetext="off"></div>
+    <!-- Dropdown Showcase End-->
+    <div class="category m-t-2">
+      <div class="showitem">
+        <h2>Checkbox</h2>
+        <h3>System default</h3>
+        <div class="item">
+          <input type="checkbox" name="" id="checkboxsystem" onclick="chk('checkboxsystem')" />
+          <input value="empty" type="text" class="showoutputtext" id="showoutcheckboxvalue" disabled />
+          <script> <!-- Not needed -->
+            function chk(x) {
+              document.getElementById("showoutcheckboxvalue").value = document.getElementById(x).value
+            }
+          </script>
+        </div>
+        <h3>Custom Checkbox</h3>
+        <p>Unlike default input based checkbox custom checkbox is not input based and doesn't have value. Rather it has
+          aria value "on" and "off". Custom checkbox can be styled and interacted with. Same logic can be be used to
+          create visual switches as well. It starts with default aria-valuetext as "off".</p>
+        <div class="item">
+          <div class="checkbox-body" onclick="checkCheckbox()">
+            <!--onclick on class checkbox-body element should be ignored for documentation purposes-->
+            <div class="checkbox shadow-default" id="checkbox-mock" onclick="changeCheckboxValue()"
+              aria-valuetext="off"></div>
+          </div>
+          <input type="text" class="showoutputtext" value="off" id="checkboxOutput" /disabled>
+          <script> <!--Not Needed-->
+            function checkCheckbox() {
+              document.getElementById("checkboxOutput").value = document.getElementById("checkbox-mock").ariaValueText
+            }
+          </script>
+        </div>
+      </div>
     </div>
-    <input type="text" class="showoutputtext" value="off" id="checkboxOutput" /disabled>
-    <script> <!--Not Needed-->
-      function checkCheckbox() {
-        document.getElementById("checkboxOutput").value = document.getElementById("checkbox-mock").ariaValueText
-      }
-    </script>
+    <div class="category m-t-2">
+      <div class="showitem">
+        <h2>Table</h2>
+        <h3>Classic</h3>
+        <p>Default styling</p>
+        <div class="item">
+          <table cellspacing=0>
+            <thead>
+              <tr>
+                <th>Col Head 1</th>
+                <th>Col Head 2</th>
+                <th>Col Head 3</th>
+                <th>Col Head 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row Value 1</td>
+                <td>Row Value 2</td>
+                <td>Row Value 3</td>
+                <td>Row Value 4</td>
+              </tr>
+              <tr>
+                <td>Row Value 5</td>
+                <td>Row Value 6</td>
+                <td>Row Value 7</td>
+                <td>Row Value 8</td>
+              </tr>
+              <tr>
+                <td>Row Value 9</td>
+                <td>Row Value 10</td>
+                <td>Row Value 11</td>
+                <td>Row Value 12</td>
+              </tr>
+              <tr>
+                <td>Row Value 13</td>
+                <td>Row Value 14</td>
+                <td>Row Value 15</td>
+                <td>Row Value 16</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+    </div>
   </div>
-   </div>
-  </div>
-  </div> 
 </body>
+
 </html>

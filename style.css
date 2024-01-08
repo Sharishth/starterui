@@ -310,3 +310,46 @@ input[type="checkbox"]:active {
  background-size: contain !important;
  background-repeat: no-repeat !important;
 }
+
+table {
+  background-color: #eee;
+  /* padding: 2px; */
+  border-radius: 10px;
+}
+
+thead > tr > th {
+  color: black !important;
+}
+
+thead > tr > th, tbody > tr > td {
+  padding: 6px;
+  font-size: 12px;
+}
+
+thead {
+  background: lightgray;
+}
+
+thead > tr > th:first-child {
+  border-top-left-radius: 8px;
+}
+
+thead > tr > th:last-child {
+  border-top-right-radius: 8px;
+}
+
+tbody > tr:nth-child(2n) {
+  background: #dddddd;
+}
+
+tbody > tr:last-child > td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+tbody > tr:last-child > td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+tbody > tr:nth-child(n):hover {
+  background: lightgray;
+}
