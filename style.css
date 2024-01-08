@@ -311,6 +311,8 @@ input[type="checkbox"]:active {
  background-repeat: no-repeat !important;
 }
 
+/* Default Table */
+
 table {
   background-color: #eee;
   /* padding: 2px; */
@@ -322,12 +324,12 @@ thead > tr > th {
 }
 
 thead > tr > th, tbody > tr > td {
-  padding: 6px;
-  font-size: 12px;
+  padding: 8px;
+  font-size: 14px;
 }
 
 thead {
-  background: lightgray;
+  background: rgb(199, 199, 199);
 }
 
 thead > tr > th:first-child {
@@ -352,4 +354,57 @@ tbody > tr:last-child > td:last-child {
 
 tbody > tr:nth-child(n):hover {
   background: lightgray;
+}
+
+/* Default Table */
+
+.inputtext {
+  border: none;
+  transition: all 0.1s ease-in-out;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #eee;
+}
+
+.inputtext:active {
+  outline: none;
+  scale: 0.95;
+}
+
+.inputtext:hover {
+  filter: brightness(0.95);
+}
+
+.inputcolor {
+  border: none;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+  height: 2rem;
+  width: 2rem;
+  background: #eee;
+}
+
+.inputcolor:active {
+  outline: none;
+  scale: 0.90;
+}
+
+.inputdate {
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.1s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  text-transform: uppercase;
+  background: #eee;
+}
+
+.inputdate:active {
+  outline: none;
+  scale: 0.95;
+}
+
+.inputdate:hover {
+  filter: brightness(0.9);
 }
