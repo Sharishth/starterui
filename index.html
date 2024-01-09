@@ -75,7 +75,7 @@
         <div class="item">
           <input type="checkbox" name="" id="checkboxsystem" onclick="chk('checkboxsystem')" />
           <input value="empty" type="text" class="showoutputtext" id="showoutcheckboxvalue" disabled />
-          <script> <!-- Not needed -->
+          <!-- Not needed --> <script>
             function chk(x) {
               document.getElementById("showoutcheckboxvalue").value = document.getElementById(x).value
             }
@@ -128,7 +128,7 @@
       <div class="showitem">
         <h2>Table</h2>
         <h3>Classic</h3>
-        <p>Default styling, no class required, set table attribute, '< table cellspacing=0 >...< / table >' for better visual appearance</p>
+        <p>Default styling, no class required, set table attribute, '< table cellspacing=0 >...< / table >' for better visual appearance. Hover effect is there by default.</p>
         <div class="item">
           <table cellspacing=0 class="shadow-default">
             <thead>
@@ -173,11 +173,122 @@
             </tbody>
           </table>
         </div>
+
+        <h3>Green Table</h3>
+        <p>Green table color scheme</p>
+        <div class="item">
+          <table cellspacing=0 class="shadow-default table-theme-green">
+            <thead>
+              <tr>
+                <th>Col Head 1</th>
+                <th>Col Head 2</th>
+                <th>Col Head 3</th>
+                <th>Col Head 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row Value 1</td>
+                <td>Row Value 2</td>
+                <td>Row Value 3</td>
+                <td>Row Value 4</td>
+              </tr>
+              <tr>
+                <td>Row Value 5</td>
+                <td>Row Value 6</td>
+                <td>Row Value 7</td>
+                <td>Row Value 8</td>
+              </tr>
+              <tr>
+                <td>Row Value 9</td>
+                <td>Row Value 10</td>
+                <td>Row Value 11</td>
+                <td>Row Value 12</td>
+              </tr>
+              <tr>
+                <td>Row Value 13</td>
+                <td>Row Value 14</td>
+                <td>Row Value 15</td>
+                <td>Row Value 16</td>
+              </tr>
+              <tr>
+                <td>Row Value 17</td>
+                <td>Row Value 18</td>
+                <td>Row Value 19</td>
+                <td>Row Value 20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         
+        <h3>Blue Table</h3>
+        <p>Blue table color scheme</p>
+        <div class="item">
+          <table cellspacing=0 class="shadow-default table-theme-blue">
+            <thead>
+              <tr>
+                <th>Col Head 1</th>
+                <th>Col Head 2</th>
+                <th>Col Head 3</th>
+                <th>Col Head 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row Value 1</td>
+                <td>Row Value 2</td>
+                <td>Row Value 3</td>
+                <td>Row Value 4</td>
+              </tr>
+              <tr>
+                <td>Row Value 5</td>
+                <td>Row Value 6</td>
+                <td>Row Value 7</td>
+                <td>Row Value 8</td>
+              </tr>
+              <tr>
+                <td>Row Value 9</td>
+                <td>Row Value 10</td>
+                <td>Row Value 11</td>
+                <td>Row Value 12</td>
+              </tr>
+              <tr>
+                <td>Row Value 13</td>
+                <td>Row Value 14</td>
+                <td>Row Value 15</td>
+                <td>Row Value 16</td>
+              </tr>
+              <tr>
+                <td>Row Value 17</td>
+                <td>Row Value 18</td>
+                <td>Row Value 19</td>
+                <td>Row Value 20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
     <!-- Table Showcase End -->
+    <div class="category m-t-2">
+      <div class="showitem">
+        <h3>Accordian</h3>
+        <p>Script Required</p>
+        <div class="item">
+          <div class="accordian shadow-default">
+            <button class="accordian-button" onclick="accexpand()" > 
+              <p>Showitem</p>
+              <p>&blacktriangledown;</p>
+            </button>
+            <div class="accordian-content" id="accordian1">
+              <p>Some content inside <br>
+                the box. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium doloremque officiis nam autem ab dicta nesciunt assumenda, aut facilis omnis beatae provident. Vitae optio eius recusandae voluptas iste. Vitae, aliquam!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
-
 </html>
