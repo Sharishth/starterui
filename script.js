@@ -29,3 +29,13 @@ function changeCheckboxValue() {
    document.getElementById("checkbox-mock").style.backgroundImage = 'none'
  }
 }
+
+// accordian function
+function accexpand() {
+  const accvar = document.getElementById('accordian1')
+  if (accvar.style.display != "block") {
+    accvar.style.display = "block"
+  } else {
+    accvar.style.display = "none"
+  }
+}
