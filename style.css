@@ -159,7 +159,7 @@
  box-shadow: 4px 4px 8px rgba(2, 0, 0, 0.250);
 }
 
-button {
+.button {
  padding: 0.75em 1em;
  border: none;
  border-radius: 0.5em;
@@ -167,11 +167,11 @@ button {
  transition: all 0.1s ease-in-out;
 }
 
-button:hover {
+.button:hover {
  filter: brightness(95%);
 }
 
-button:active {
+.button:active {
  filter: brightness(90%);
  transform: scale(0.95);
 }
@@ -358,6 +358,34 @@ tbody > tr:nth-child(n):hover {
 
 /* Default Table */
 
+/* Table colors */
+
+.table-theme-green > thead {
+  background: rgb(190, 255, 190);
+}
+
+.table-theme-green > tbody > tr:nth-child(2n) {
+  background: rgb(184, 241, 184);
+}
+
+.table-theme-green > tbody > tr:nth-child(n):hover {
+  background: rgb(149, 202, 149);
+}
+
+.table-theme-blue > thead {
+  background: rgb(190, 246, 255);
+}
+
+.table-theme-blue > tbody > tr:nth-child(2n) {
+  background: rgb(184, 234, 241);
+}
+
+.table-theme-blue > tbody > tr:nth-child(n):hover {
+  background: rgb(178, 203, 214);
+}
+
+/* Table colors */
+
 .inputtext {
   border: none;
   transition: all 0.1s ease-in-out;
@@ -369,7 +397,7 @@ tbody > tr:nth-child(n):hover {
 
 .inputtext:active {
   outline: none;
-  scale: 0.95;
+  scale: 0.98;
 }
 
 .inputtext:hover {
@@ -387,7 +415,7 @@ tbody > tr:nth-child(n):hover {
 
 .inputcolor:active {
   outline: none;
-  scale: 0.90;
+  scale: 0.98;
 }
 
 .inputdate {
@@ -402,9 +430,38 @@ tbody > tr:nth-child(n):hover {
 
 .inputdate:active {
   outline: none;
-  scale: 0.95;
+  scale: 0.98;
 }
 
 .inputdate:hover {
   filter: brightness(0.9);
+}
+
+.accordian {
+  background: #eee;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.accordian-button {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.accordian-button:hover {
+  background: #dbdbdb;
+}
+
+.accordian-button > p {
+  margin: 0;
+}
+
+.accordian-content {
+  display: none;
 }
