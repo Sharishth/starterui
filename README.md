@@ -9,3 +9,13 @@ Note: _layout.css should be ignored and is only there for formatting documentati
   1. Button and variants
   2. Dropdown
   3. Checkbox
+### Input Boxes
+  1. Text type input
+  2. Date type input
+
+### Table
+  1. Default
+  2. Theme variants
+
+### Accordian
+  1. Default Accordian
