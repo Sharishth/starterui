@@ -238,9 +238,6 @@
 .options {
  /* display: flex; */
  flex-direction: column;
-}
-
-#options {
  display: none;
 }
 
