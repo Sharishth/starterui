@@ -49,20 +49,19 @@
       <div class="showitem">
         <h3>Default Dropdown (Script Required)</h3>
         <div class="item">
-          <div class="dropdown ">
-            <button type="button" onclick="dropdown()" aria-valuetext="" id="dropdownValue">Select Option
+          <div class="dropdown">
+            <button type="button" onclick="dropdown(this)" aria-valuetext="" class="dropdownValue">Select Option
               &blacktriangledown;</button>
-            <div class="options" id="options">
-              <button type="button" class="optionitem" onclick="setOptionValue('Option Value 1')">Option Value
+            <div class="options">
+              <button type="button" class="optionitem" onclick="setOptionValue(this, 'Option Value 1')">Option Value
                 1</button>
-              <button type="button" class="optionitem" onclick="setOptionValue('Option Value 2')">Option Value
+              <button type="button" class="optionitem" onclick="setOptionValue(this, 'Option Value 2')">Option Value
                 2</button>
-              <button type="button" class="optionitem" onclick="setOptionValue('Option Value 3')">Option Value
+              <button type="button" class="optionitem" onclick="setOptionValue(this, 'Option Value 3')">Option Value
                 3</button>
             </div>
           </div>
           <input value="no selection by default" type="text" class="showoutputtext" id="showoutputtext" disabled />
-          </script>
         </div>
       </div>
     </div>
@@ -75,11 +74,12 @@
         <div class="item">
           <input type="checkbox" name="" id="checkboxsystem" onclick="chk('checkboxsystem')" />
           <input value="empty" type="text" class="showoutputtext" id="showoutcheckboxvalue" disabled />
-          <!-- Not needed --> <script>
+          <!-- Not needed -->
+          <script>
             function chk(x) {
               document.getElementById("showoutcheckboxvalue").value = document.getElementById(x).value
             }
-          </script> 
+          </script>
         </div>
         <h3>Custom Checkbox</h3>
         <p>Unlike default input based checkbox custom checkbox is not input based and doesn't have value. Rather it has
@@ -87,12 +87,15 @@
           create visual switches as well. It starts with default aria-valuetext as "off".</p>
         <div class="item">
           <div class="checkbox-body" onclick="checkCheckbox()">
-            <!--onclick on class checkbox-body element should be ignored for documentation purposes-->
-            <div class="checkbox shadow-default" id="checkbox-mock" onclick="changeCheckboxValue()"
-              aria-valuetext="off"></div>
+            <!-- onclick on class checkbox-body element and ID attribute checkbox-mock should be ignored for documentation purposes -->
+            <div id="checkbox-mock" class="checkbox shadow-default" onclick="changeCheckboxValue(this)"
+              aria-valuetext="off">
+            </div>
           </div>
+
           <input type="text" class="showoutputtext" value="off" id="checkboxOutput" /disabled>
-          <script> <!--Not Needed-->
+          <!--Below Not Needed-->
+          <script>
             function checkCheckbox() {
               document.getElementById("checkboxOutput").value = document.getElementById("checkbox-mock").ariaValueText
             }
@@ -128,7 +131,8 @@
       <div class="showitem">
         <h2>Table</h2>
         <h3>Classic</h3>
-        <p>Default styling, no class required, set table attribute, '< table cellspacing=0 >...< / table >' for better visual appearance. Hover effect is there by default.</p>
+        <p>Default styling, no class required, set table attribute, '< table cellspacing=0>...< / table>' for better
+              visual appearance. Hover effect is there by default.</p>
         <div class="item">
           <table cellspacing=0 class="shadow-default">
             <thead>
@@ -220,7 +224,7 @@
             </tbody>
           </table>
         </div>
-        
+
         <h3>Blue Table</h3>
         <p>Blue table color scheme</p>
         <div class="item">
@@ -276,13 +280,24 @@
         <p>Script Required</p>
         <div class="item">
           <div class="accordian shadow-default">
-            <button class="accordian-button" onclick="accexpand()" > 
-              <p>Showitem</p>
+            <button class="accordian-button" onclick="accexpand(this)">
+              <p>Show 1st item</p>
               <p>&blacktriangledown;</p>
             </button>
-            <div class="accordian-content" id="accordian1">
+            <div class="accordian-content">
               <p>Some content inside <br>
-                the box. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium doloremque officiis nam autem ab dicta nesciunt assumenda, aut facilis omnis beatae provident. Vitae optio eius recusandae voluptas iste. Vitae, aliquam!
+                the box. Another accordion content.
+              </p>
+            </div>
+          </div>
+          <div class="accordian shadow-default">
+            <button class="accordian-button" onclick="accexpand(this)">
+              <p>Show 2nd item</p>
+              <p>&blacktriangledown;</p>
+            </button>
+            <div class="accordian-content">
+              <p>Some content inside <br>
+                the box. Another accordion content.
               </p>
             </div>
           </div>
@@ -291,4 +306,5 @@
     </div>
   </div>
 </body>
+
 </html>
