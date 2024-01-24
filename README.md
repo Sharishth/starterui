@@ -4,6 +4,21 @@ Straightforward UI component library and styling rule set using HTML, CSS, and J
 
 Note: _layout.css should be ignored and is only there for formatting documentation of showcase._
 
+#### Next targert 
+  1. Carousel (with radio variant)
+  2. Breadcrumbs
+  3. Navbar
+  4. Timeline
+  5. Pagination
+  6. Input - radio
+  7. Input - range
+  8. Checkbox (Toggle variant)
+  9. Divider (Vertical and Horizontal, and with text)
+  10. Drawer
+  11. Footer page (landing template)
+  12. Code
+  13. Mock Browser (Desktop and phone)
+
 ## Components Till now
 ### Action
   1. Button and variants
@@ -19,3 +34,16 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 
 ### Accordian
   1. Default Accordian
+
+### Badges/Tags
+  1. Count
+  2. info
+  3. warning
+  4. error
+  5. success
+
+# Card
+  1. Text Card
+  2. Quote and review Card
+  3. Card with avatar
+  4. Card with Image and description
