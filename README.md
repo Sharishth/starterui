@@ -4,7 +4,7 @@ Straightforward UI component library and styling rule set using HTML, CSS, and J
 
 Note: _layout.css should be ignored and is only there for formatting documentation of showcase._
 
-#### Next targert 
+#### Next target 
   1. Carousel (with radio variant)
   2. Breadcrumbs
   3. Navbar
@@ -32,8 +32,8 @@ Note: _layout.css should be ignored and is only there for formatting documentati
   1. Default
   2. Theme variants
 
-### Accordian
-  1. Default Accordian
+### Accordion
+  1. Default Accordion
 
 ### Badges/Tags
   1. Count
