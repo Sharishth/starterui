@@ -21,7 +21,7 @@ html {
 }
 
 .layout-bg-img {
- background: url('pexels-felix-mittermeier-956999.jpg') no-repeat center;
+ background: url('pexels-felix-mittermeier-956999.jpg') no-repeat center !important;
 }
 
 .page-heading {
@@ -88,4 +88,17 @@ html {
  background-color: #eee;
  border: none;
  border-radius: 8px;
+}
+
+.item-flex-jc-ac-row {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: row !important;
+ background: linear-gradient(45deg, coral, cornflowerblue);
+ padding: 3%;
+ border: none;
+ border-radius: 1rem;
+ gap: 1rem;
+ flex-wrap: wrap;
 }
