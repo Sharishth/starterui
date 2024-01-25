@@ -42,8 +42,12 @@ Note: _layout.css should be ignored and is only there for formatting documentati
   4. error
   5. success
 
-# Card
+### Card
   1. Text Card
   2. Quote and review Card
   3. Card with avatar
   4. Card with Image and description
+
+### Carousel
+  1. For Image
+  2. For Any div content
