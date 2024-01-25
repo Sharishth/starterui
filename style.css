@@ -255,6 +255,13 @@
   backdrop-filter: blur(2px);
 }
 
+.bg-glass-scheme {
+  background: rgba(0, 0, 0, 0.342) !important;
+  color: rgba(255, 255, 255, 0.884);
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.185);
+  backdrop-filter: blur(2px);
+}
+
 .select {
   padding: 0.75em 1em;
   border: none;
@@ -646,3 +653,56 @@ tbody > tr:nth-child(n):hover {
 .card-img-text > .card-img-text-head > h1 {
   margin-top: 0;
 }
+
+/* carousel rules */
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carouselContentContainer > img:first-of-type {
+  display: block;
+}
+
+.carouselContentContainer > *:not(:first-of-type) {
+  display: none;
+}
+
+.img-slide-previous, .img-slide-next {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel > .carouselContentContainer > img {
+  border-radius: 8px;
+}
+
+.carousel > * > button {
+  font-size: 1.75rem;
+}
+
+.img-slide-previous > button {
+  /* left: 0; */
+  border-radius: 0 4rem 4rem 0;
+  margin-right: -5rem;
+}
+
+.img-slide-next > button {
+  /* right: 0; */
+  border-radius: 4rem 0 0 4rem;
+  margin-left: -4.8rem;
+}
+
+.carouselContentContainer > .carouselDiv:first-of-type {
+  display: block;
+ }
+ 
+ .carouselContentContainer > .carouselDiv:not(:first-of-type) {
+  display: none;
+ }
+/* carousel rules */
