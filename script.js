@@ -46,3 +46,76 @@ function accexpand(button) {
     accordionContent.style.display = "none";
   }
 }
+
+// Carousel function
+function updateCarousel(images, currentIndex) {
+  images.forEach((img, index) => {
+   img.style.display = index === currentIndex ? 'block' : 'none';
+  });
+ }
+ 
+ function carouselPrevImage(button) {
+  const carousel = button.closest('.carousel');
+  let currentIndex = carousel.currentIndex || 0;
+  let images = carousel.images;
+ 
+  if (!images) {
+   images = carousel.querySelectorAll('.carouselContentContainer *');
+   carousel.images = images; // Store images NodeList in carousel object
+  }
+ 
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  carousel.currentIndex = currentIndex; // Update currentIndex in the carousel object
+  updateCarousel(images, currentIndex);
+ }
+ 
+ function carouselNextImage(button) {
+  const carousel = button.closest('.carousel');
+  let currentIndex = carousel.currentIndex || 0;
+  let images = carousel.images;
+ 
+  if (!images) {
+   images = carousel.querySelectorAll('.carouselContentContainer *');
+   carousel.images = images; // Store images NodeList in carousel object
+  }
+ 
+  currentIndex = (currentIndex + 1) % images.length;
+  carousel.currentIndex = currentIndex; // Update currentIndex in the carousel object
+  updateCarousel(images, currentIndex);
+ }
+ ////
+ function updateCarouselDiv(elements, currentIndex) {
+  elements.forEach((el, index) => {
+   el.style.display = index === currentIndex ? 'block' : 'none';
+  });
+ }
+ 
+ function carouselPrevElementDiv(button) {
+  const carousel = button.closest('.carousel');
+  let currentIndex = carousel.currentIndex || 0;
+  let elements = carousel.elements;
+ 
+  if (!elements) {
+   elements = Array.from(carousel.querySelectorAll('.carouselContentContainer .carouselDiv'));
+   carousel.elements = elements; // Store elements array in carousel object
+  }
+ 
+  currentIndex = (currentIndex - 1 + elements.length) % elements.length;
+  carousel.currentIndex = currentIndex; // Update currentIndex in the carousel object
+  updateCarouselDiv(elements, currentIndex);
+ }
+ 
+ function carouselNextElementDiv(button) {
+  const carousel = button.closest('.carousel');
+  let currentIndex = carousel.currentIndex || 0;
+  let elements = carousel.elements;
+ 
+  if (!elements) {
+   elements = Array.from(carousel.querySelectorAll('.carouselContentContainer .carouselDiv'));
+   carousel.elements = elements; // Store elements array in carousel object
+  }
+ 
+  currentIndex = (currentIndex + 1) % elements.length;
+  carousel.currentIndex = currentIndex; // Update currentIndex in the carousel object
+  updateCarouselDiv(elements, currentIndex);
+ }
