@@ -487,6 +487,61 @@
             </div>
           </div> 
         </div>
+        <h3>Auto Slide with interval</h3>
+        <p>Default interval between each element is 5 seconds or 5000 ms.
+          make sure to declare in pre script in head 
+          simply by declaring constant "CarouselInterval" in millisecond units, it pauses on mouse hover and resumes on mouse out.
+        </p>
+        <div class="item">
+          <div class="carouselAuto">
+            <script>
+              const CarouselInterval = 1500;
+            </script>
+            <div class="img-slide-previous">
+              <button class="bg-glass-scheme button" onclick="carouselAutoPrevElementDiv(this)">&lessdot;</button>
+            </div>
+            <div class="carouselContentContainer">
+              <div class="carouselDiv">
+                <div class="card-quote shadow-default ">
+                  <div class="card-quote-head">
+                    <h1>Unity is strenght</h1>
+                  </div>
+                  <div class="card-quote-body">
+                    <p>For fellow citizens:</p>
+                    <p>&OpenCurlyDoubleQuote;Alone we are weak, united we are strong and unbreakable are our bonds.&CloseCurlyDoubleQuote;</p>
+                    <p>- John Doe</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carouselDiv">
+                <div class="card-quote shadow-default">
+                  <div class="card-quote-head">
+                    <h1>Amazing Product</h1>
+                  </div>
+                  <div class="card-quote-body">
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>&OpenCurlyDoubleQuote;Never been unsatisfied with their unique unmatched quaity.&CloseCurlyDoubleQuote;</p>
+                    <p>- Anna Bergi</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carouselDiv">
+                <div class="card-comment shadow-default">
+                  <div class="card-comment-head">
+                    <img src="pexels-felix-mittermeier-956999.jpg" alt="">
+                    <div><h1>Sharishth Singh</h1></div>
+                  </div>
+                  <div class="card-comment-body">
+                    <p>A.I. will only replace people who don't adapt to changes around them. <br> With A.I. you are now a team of two, if you are not distributing <br> your work responsibly you may get insecure about being replaced.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="img-slide-next">
+              <button class="bg-glass-scheme button" onclick="carouselAutoNextElementDiv(this)" >&gtrdot;</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
