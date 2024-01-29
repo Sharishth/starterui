@@ -2,551 +2,654 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>s Library</title>
-  <link rel="stylesheet" href="layout.css">
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>s Library</title>
+ <link rel="stylesheet" href="layout.css">
+ <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="font-family-system-segoe">
-  <div class="showcase">
-    <h1 class="page-heading">Actions</h1>
-    <!-- Button Showcase -->
-    <div class="category">
-      <h2>Buttons</h2>
-      <!-- Simple Button -->
-      <div class="showitem">
-        <h3>Default Button</h3>
-        <div class="item">
-          <button class="button">Button</button>
-        </div>
-      </div>
-      <!-- Button Shadow -->
-      <div class="showitem">
-        <h3>Button Shadow</h3>
-        <div class="item">
-          <button class="button shadow-default">Button</button>
-        </div>
-      </div>
-      <!-- Button Glass -->
-      <div class="showitem">
-        <h3>Glass Button</h3>
-        <div class="item layout-bg-img">
-          <button class="button bg-glass-scheme">Button</button>
-        </div>
-      </div>
+ <div class="showcase">
+  <h1 class="page-heading">Actions</h1>
+  <!-- Button Showcase -->
+  <div class="category">
+   <h2>Buttons</h2>
+   <!-- Simple Button -->
+   <div class="showitem">
+    <h3>Default Button</h3>
+    <div class="item">
+     <button class="button">Button</button>
     </div>
-
-    <div class="layout-line-segment m-t-4">
-
+   </div>
+   <!-- Button Shadow -->
+   <div class="showitem">
+    <h3>Button Shadow</h3>
+    <div class="item">
+     <button class="button shadow-default">Button</button>
     </div>
-    <!-- Dropdown Showcase -->
-    <div class="category m-t-2">
-      <h2>Dropdown</h2>
-      <!-- Simple Button -->
-      <div class="showitem">
-        <h3>Default Dropdown (Script Required)</h3>
-        <div class="item">
-          <div class="dropdown">
-            <button type="button" onclick="dropdown(this)" aria-valuetext="" class="dropdownValue">Select Option
-              &blacktriangledown;</button>
-            <div class="options">
-              <button type="button" class="optionitem" onclick="setOptionValue(this, 'Option Value 1')">Option Value
-                1</button>
-              <button type="button" class="optionitem" onclick="setOptionValue(this, 'Option Value 2')">Option Value
-                2</button>
-              <button type="button" class="optionitem" onclick="setOptionValue(this, 'Option Value 3')">Option Value
-                3</button>
-            </div>
-          </div>
-          <input value="no selection by default" type="text" class="showoutputtext" id="showoutputtext" disabled />
-        </div>
-      </div>
+   </div>
+   <!-- Button Glass -->
+   <div class="showitem">
+    <h3>Glass Button</h3>
+    <div class="item layout-bg-img">
+     <button class="button bg-glass-scheme">Button</button>
     </div>
-    <!-- Dropdown Showcase End-->
-    <!-- Checkbox Showcase Start -->
-    <div class="category m-t-2">
-      <div class="showitem">
-        <h2>Checkbox</h2>
-        <h3>System default</h3>
-        <div class="item">
-          <input type="checkbox" name="" id="checkboxsystem" onclick="chk('checkboxsystem')" />
-          <input value="empty" type="text" class="showoutputtext" id="showoutcheckboxvalue" disabled />
-          <!-- Not needed -->
-          <script>
-            function chk(x) {
-              document.getElementById("showoutcheckboxvalue").value = document.getElementById(x).value
-            }
-          </script>
-        </div>
-        <h3>Custom Checkbox</h3>
-        <p>Unlike default input based checkbox custom checkbox is not input based and doesn't have value. Rather it has
-          aria value "on" and "off". Custom checkbox can be styled and interacted with. Same logic can be be used to
-          create visual switches as well. It starts with default aria-valuetext as "off".</p>
-        <div class="item">
-          <div class="checkbox-body" onclick="checkCheckbox()">
-            <!-- onclick on class checkbox-body element and ID attribute checkbox-mock should be ignored for documentation purposes -->
-            <div id="checkbox-mock" class="checkbox shadow-default" onclick="changeCheckboxValue(this)"
-              aria-valuetext="off">
-            </div>
-          </div>
-
-          <input type="text" class="showoutputtext" value="off" id="checkboxOutput" /disabled>
-          <!--Below Not Needed-->
-          <script>
-            function checkCheckbox() {
-              document.getElementById("checkboxOutput").value = document.getElementById("checkbox-mock").ariaValueText
-            }
-          </script>
-        </div>
-      </div>
-    </div>
-    <!-- Checkbox Showcase End -->
-    <!-- Input Showcase Start -->
-    <div class="category m-t-2">
-      <div class="showitem">
-        <h2>Inputs Boxes</h2>
-        <h3>Text Input</h3>
-        <div class="item">
-          <input type="text" class="inputtext" placeholder="Your Text here!">
-          <input type="email" class="inputtext" placeholder="someone@example.com">
-          <input type="password" class="inputtext" placeholder="password">
-          <input type="datetime" class="inputtext" placeholder="2024-01-01T01:01:60Z">
-          <!-- <input type="color" class="inputcolor" > -->
-        </div>
-        <h3>Date Input</h3>
-        <p>class 'inputdate' on any date type input</p>
-        <div class="item">
-          <input type="date" class="inputdate">
-          <input type="week" class="inputdate">
-          <input type="datetime-local" class="inputdate">
-        </div>
-      </div>
-    </div>
-    <!-- Input Showcase End   -->
-    <!-- Table Showcase Start -->
-    <div class="category m-t-2">
-      <div class="showitem">
-        <h2>Table</h2>
-        <h3>Classic</h3>
-        <p>Default styling, no class required, set table attribute, '< table cellspacing=0>...< / table>' for better
-              visual appearance. Hover effect is there by default.</p>
-        <div class="item">
-          <table cellspacing=0 class="shadow-default">
-            <thead>
-              <tr>
-                <th>Col Head 1</th>
-                <th>Col Head 2</th>
-                <th>Col Head 3</th>
-                <th>Col Head 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Row Value 1</td>
-                <td>Row Value 2</td>
-                <td>Row Value 3</td>
-                <td>Row Value 4</td>
-              </tr>
-              <tr>
-                <td>Row Value 5</td>
-                <td>Row Value 6</td>
-                <td>Row Value 7</td>
-                <td>Row Value 8</td>
-              </tr>
-              <tr>
-                <td>Row Value 9</td>
-                <td>Row Value 10</td>
-                <td>Row Value 11</td>
-                <td>Row Value 12</td>
-              </tr>
-              <tr>
-                <td>Row Value 13</td>
-                <td>Row Value 14</td>
-                <td>Row Value 15</td>
-                <td>Row Value 16</td>
-              </tr>
-              <tr>
-                <td>Row Value 17</td>
-                <td>Row Value 18</td>
-                <td>Row Value 19</td>
-                <td>Row Value 20</td>
-              </tr>
-            </tbody>
-          </table>
-          <table cellspacing=2 class="shadow-default">
-            <thead>
-              <tr>
-                <th>Col Head 1</th>
-                <th>Col Head 2</th>
-                <th>Col Head 3</th>
-                <th>Col Head 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Row Value 1</td>
-                <td>Row Value 2</td>
-                <td>Row Value 3</td>
-                <td>Row Value 4</td>
-              </tr>
-              <tr>
-                <td>Row Value 5</td>
-                <td>Row Value 6</td>
-                <td>Row Value 7</td>
-                <td>Row Value 8</td>
-              </tr>
-              <tr>
-                <td>Row Value 9</td>
-                <td>Row Value 10</td>
-                <td>Row Value 11</td>
-                <td>Row Value 12</td>
-              </tr>
-              <tr>
-                <td>Row Value 13</td>
-                <td>Row Value 14</td>
-                <td>Row Value 15</td>
-                <td>Row Value 16</td>
-              </tr>
-              <tr>
-                <td>Row Value 17</td>
-                <td>Row Value 18</td>
-                <td>Row Value 19</td>
-                <td>Row Value 20</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>Green Table</h3>
-        <p>Green table color scheme</p>
-        <div class="item">
-          <table cellspacing=0 class="shadow-default table-theme-green">
-            <thead>
-              <tr>
-                <th>Col Head 1</th>
-                <th>Col Head 2</th>
-                <th>Col Head 3</th>
-                <th>Col Head 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Row Value 1</td>
-                <td>Row Value 2</td>
-                <td>Row Value 3</td>
-                <td>Row Value 4</td>
-              </tr>
-              <tr>
-                <td>Row Value 5</td>
-                <td>Row Value 6</td>
-                <td>Row Value 7</td>
-                <td>Row Value 8</td>
-              </tr>
-              <tr>
-                <td>Row Value 9</td>
-                <td>Row Value 10</td>
-                <td>Row Value 11</td>
-                <td>Row Value 12</td>
-              </tr>
-              <tr>
-                <td>Row Value 13</td>
-                <td>Row Value 14</td>
-                <td>Row Value 15</td>
-                <td>Row Value 16</td>
-              </tr>
-              <tr>
-                <td>Row Value 17</td>
-                <td>Row Value 18</td>
-                <td>Row Value 19</td>
-                <td>Row Value 20</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>Blue Table</h3>
-        <p>Blue table color scheme</p>
-        <div class="item">
-          <table cellspacing=0 class="shadow-default table-theme-blue">
-            <thead>
-              <tr>
-                <th>Col Head 1</th>
-                <th>Col Head 2</th>
-                <th>Col Head 3</th>
-                <th>Col Head 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Row Value 1</td>
-                <td>Row Value 2</td>
-                <td>Row Value 3</td>
-                <td>Row Value 4</td>
-              </tr>
-              <tr>
-                <td>Row Value 5</td>
-                <td>Row Value 6</td>
-                <td>Row Value 7</td>
-                <td>Row Value 8</td>
-              </tr>
-              <tr>
-                <td>Row Value 9</td>
-                <td>Row Value 10</td>
-                <td>Row Value 11</td>
-                <td>Row Value 12</td>
-              </tr>
-              <tr>
-                <td>Row Value 13</td>
-                <td>Row Value 14</td>
-                <td>Row Value 15</td>
-                <td>Row Value 16</td>
-              </tr>
-              <tr>
-                <td>Row Value 17</td>
-                <td>Row Value 18</td>
-                <td>Row Value 19</td>
-                <td>Row Value 20</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <!-- Table Showcase End -->
-    <!-- Accordian Showcase Start -->
-    <div class="category m-t-2">
-      <div class="showitem">
-        <h2>Accordian</h2>
-        <h3>Classic</h3>
-        <p>Script Required</p>
-        <div class="item">
-          <div class="accordian shadow-default">
-            <button class="accordian-button" onclick="accexpand(this)">
-              <p>Show 1st item</p>
-              <p>&blacktriangledown;</p>
-            </button>
-            <div class="accordian-content">
-              <p>Some content inside <br>
-                the box. Another accordion content.
-              </p>
-            </div>
-          </div>
-          <div class="accordian shadow-default">
-            <button class="accordian-button" onclick="accexpand(this)">
-              <p>Show 2nd item</p>
-              <p>&blacktriangledown;</p>
-            </button>
-            <div class="accordian-content">
-              <p>Some content inside <br>
-                the box. Another accordion content.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Accordian Showcase End -->
-    <!-- Badge Showcase Start -->
-    <div class="category m-t-2">
-      <div class="showitem">
-        <h2>Badge / Tags</h2>
-        <h3>Default</h3>
-        <p>Use Badges to inform or give stats.</p>
-        <div class="item-flex-jc-ac-row layout-bg-img">
-          <p class="badge-count">+99</p>
-          <p class="badge-info">info</p>
-          <p class="badge-warn">warning</p>
-          <p class="badge-error">error</p>
-          <p class="badge-success">success</p>
-        </div>
-      </div>
-    </div>
-    <!-- Badge Showcase Start -->
-    <div class="category m-t-2">
-      <div class="showitem">
-        <h2>Card</h2>
-        <h3>Text Card</h3>
-        <p>Simple card with heading and paragraph</p>
-        <div class="item-flex-jc-ac-row">
-          <div class="card-text shadow-default" id="mock-card">
-            <h1>Earth 🌍</h1>
-            <p>Earth is the third planet from the<br> Sun and the only astronomical<br> object known to harbor life. This<br> is enabled by Earth being a water<br> world, the only one in the Solar<br> System sustaining liquid surface<br> water which life depends on. </p>
-            <a href="#mock-card" class="link-button place-self-center">Learn More</a>
-          </div>
-        </div>
-        <h3>Quote text card</h3>
-        <p>Text card for comments and quotes</p>
-        <div class="item-flex-jc-ac-row">
-          <div class="card-quote shadow-default">
-            <div class="card-quote-head">
-              <h1>Unity is strenght</h1>
-            </div>
-            <div class="card-quote-body">
-              <p>For fellow citizens:</p>
-              <p>&OpenCurlyDoubleQuote;Alone we are weak, united we are strong and unbreakable are our bonds.&CloseCurlyDoubleQuote;</p>
-              <p>- John Doe</p>
-            </div>
-          </div>
-          <div class="card-quote shadow-default">
-            <div class="card-quote-head">
-              <h1>Amazing Product</h1>
-            </div>
-            <div class="card-quote-body">
-              <p>⭐⭐⭐⭐⭐</p>
-              <p>&OpenCurlyDoubleQuote;Never been unsatisfied with their unique unmatched quaity.&CloseCurlyDoubleQuote;</p>
-              <p>- Anna Bergi</p>
-            </div>
-          </div>
-        </div>
-        <h3>Comment Card with avatar</h3>
-        <p>Similar to quote cards with a person's image.</p>
-        <div class="item">
-          <div class="card-comment shadow-default">
-            <div class="card-comment-head">
-              <img src="pexels-felix-mittermeier-956999.jpg" alt="">
-              <div><h1>Sharishth Singh</h1></div>
-            </div>
-            <div class="card-comment-body">
-              <p>A.I. will only replace people who don't adapt to changes around them. <br> With A.I. you are now a team of two, if you are not distributing <br> your work responsibly you may get insecure about being replaced.</p>
-            </div>
-          </div>
-        </div>
-        <h3>Card With Image</h3>
-        <p>Card having some image and description.</p>
-        <div class="item">
-          <div class="card-img-text shadow-default">
-            <div class="card-img-text-head"><h1>The Stars</h1></div>
-            <div class="card-img-text-body">
-              <img src="pexels-felix-mittermeier-956999.jpg" alt="" style="height: 200px;">
-            </div>
-            <div class="card-img-text-footer">
-              <p>Photo of stars in clear sky at night.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="category m-t-2">
-      <div class="showitem">
-        <h2>Carousel</h2>
-        <h3>Default</h3>
-        <p>Image slider</p>
-        <div class="item">
-          <div class="carousel">
-            <div class="img-slide-previous">
-              <button class="bg-glass-scheme button" onclick="carouselPrevImage(this)">&lessdot;</button>
-            </div>
-            <div class="carouselContentContainer">
-              <img src="./assets/1.jpg" alt="" height="250px" width="350">
-              <img src="./assets/2.jpg" alt="" height="250px" width="350">
-              <img src="./assets/3.jpg" alt="" height="250px" width="350">
-              <img src="./assets/4.jpg" alt="" height="250px" width="350">
-            </div>
-            <div class="img-slide-next">
-              <button class="bg-glass-scheme button" onclick="carouselNextImage(this)" >&gtrdot;</button>
-            </div>
-          </div> 
-        </div>
-        <h3>Any Slides</h3>
-        <p>Have any div inside (Needs to be enchanced for better UI).</p>
-        <div class="item">
-          <div class="carousel">
-            <div class="img-slide-previous">
-              <button class="bg-glass-scheme button" onclick="carouselPrevElementDiv(this)">&lessdot;</button>
-            </div>
-            <div class="carouselContentContainer">
-              <div class="carouselDiv">
-                <div class="card-quote shadow-default ">
-                  <div class="card-quote-head">
-                    <h1>Unity is strenght</h1>
-                  </div>
-                  <div class="card-quote-body">
-                    <p>For fellow citizens:</p>
-                    <p>&OpenCurlyDoubleQuote;Alone we are weak, united we are strong and unbreakable are our bonds.&CloseCurlyDoubleQuote;</p>
-                    <p>- John Doe</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carouselDiv">
-                <div class="card-quote shadow-default">
-                  <div class="card-quote-head">
-                    <h1>Amazing Product</h1>
-                  </div>
-                  <div class="card-quote-body">
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>&OpenCurlyDoubleQuote;Never been unsatisfied with their unique unmatched quaity.&CloseCurlyDoubleQuote;</p>
-                    <p>- Anna Bergi</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="img-slide-next">
-              <button class="bg-glass-scheme button" onclick="carouselNextElementDiv(this)" >&gtrdot;</button>
-            </div>
-          </div> 
-        </div>
-        <h3>Auto Slide with interval</h3>
-        <p>Default interval between each element is 5 seconds or 5000 ms.
-          make sure to declare in pre script in head 
-          simply by declaring constant "CarouselInterval" in millisecond units, it pauses on mouse hover and resumes on mouse out.
-        </p>
-        <div class="item">
-          <div class="carouselAuto">
-            <script>
-              const CarouselInterval = 1500;
-            </script>
-            <div class="img-slide-previous">
-              <button class="bg-glass-scheme button" onclick="carouselAutoPrevElementDiv(this)">&lessdot;</button>
-            </div>
-            <div class="carouselContentContainer">
-              <div class="carouselDiv">
-                <div class="card-quote shadow-default ">
-                  <div class="card-quote-head">
-                    <h1>Unity is strenght</h1>
-                  </div>
-                  <div class="card-quote-body">
-                    <p>For fellow citizens:</p>
-                    <p>&OpenCurlyDoubleQuote;Alone we are weak, united we are strong and unbreakable are our bonds.&CloseCurlyDoubleQuote;</p>
-                    <p>- John Doe</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carouselDiv">
-                <div class="card-quote shadow-default">
-                  <div class="card-quote-head">
-                    <h1>Amazing Product</h1>
-                  </div>
-                  <div class="card-quote-body">
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>&OpenCurlyDoubleQuote;Never been unsatisfied with their unique unmatched quaity.&CloseCurlyDoubleQuote;</p>
-                    <p>- Anna Bergi</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carouselDiv">
-                <div class="card-comment shadow-default">
-                  <div class="card-comment-head">
-                    <img src="pexels-felix-mittermeier-956999.jpg" alt="">
-                    <div><h1>Sharishth Singh</h1></div>
-                  </div>
-                  <div class="card-comment-body">
-                    <p>A.I. will only replace people who don't adapt to changes around them. <br> With A.I. you are now a team of two, if you are not distributing <br> your work responsibly you may get insecure about being replaced.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="img-slide-next">
-              <button class="bg-glass-scheme button" onclick="carouselAutoNextElementDiv(this)" >&gtrdot;</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   </div>
   </div>
 
-  <script src="script.js"></script>
+  <div class="layout-line-segment m-t-4">
+
+  </div>
+  <!-- Dropdown Showcase -->
+  <div class="category m-t-2">
+   <h2>Dropdown</h2>
+   <!-- Simple Button -->
+   <div class="showitem">
+    <h3>Default Dropdown (Script Required)</h3>
+    <div class="item">
+     <div class="dropdown">
+      <button type="button" onclick="dropdown(this)" aria-valuetext="" class="dropdownValue">Select Option
+       &blacktriangledown;</button>
+      <div class="options">
+       <button type="button" class="optionitem" onclick="setOptionValue(this, 'Option Value 1')">Option Value
+        1</button>
+       <button type="button" class="optionitem" onclick="setOptionValue(this, 'Option Value 2')">Option Value
+        2</button>
+       <button type="button" class="optionitem" onclick="setOptionValue(this, 'Option Value 3')">Option Value
+        3</button>
+      </div>
+     </div>
+     <input value="no selection by default" type="text" class="showoutputtext" id="showoutputtext" disabled />
+    </div>
+   </div>
+  </div>
+  <!-- Dropdown Showcase End-->
+  <!-- Checkbox Showcase Start -->
+  <div class="category m-t-2">
+   <div class="showitem">
+    <h2>Checkbox</h2>
+    <h3>System default</h3>
+    <div class="item">
+     <input type="checkbox" name="" id="checkboxsystem" onclick="chk('checkboxsystem')" />
+     <input value="empty" type="text" class="showoutputtext" id="showoutcheckboxvalue" disabled />
+     <!-- Not needed -->
+     <script>
+      function chk(x) {
+       document.getElementById("showoutcheckboxvalue").value = document.getElementById(x).value
+      }
+     </script>
+    </div>
+    <h3>Custom Checkbox</h3>
+    <p>Unlike default input based checkbox custom checkbox is not input based and doesn't have value. Rather it has
+     aria value "on" and "off". Custom checkbox can be styled and interacted with. Same logic can be be used to
+     create visual switches as well. It starts with default aria-valuetext as "off".</p>
+    <div class="item">
+     <div class="checkbox-body" onclick="checkCheckbox()">
+      <!-- onclick on class checkbox-body element and ID attribute checkbox-mock should be ignored for documentation purposes -->
+      <div id="checkbox-mock" class="checkbox shadow-default" onclick="changeCheckboxValue(this)" aria-valuetext="off">
+      </div>
+     </div>
+
+     <input type="text" class="showoutputtext" value="off" id="checkboxOutput" /disabled>
+     <!--Below Not Needed-->
+     <script>
+      function checkCheckbox() {
+       document.getElementById("checkboxOutput").value = document.getElementById("checkbox-mock").ariaValueText
+      }
+     </script>
+    </div>
+   </div>
+  </div>
+  <!-- Checkbox Showcase End -->
+  <!-- Input Showcase Start -->
+  <div class="category m-t-2">
+   <div class="showitem">
+    <h2>Inputs Boxes</h2>
+    <h3>Text Input</h3>
+    <div class="item">
+     <input type="text" class="inputtext" placeholder="Your Text here!">
+     <input type="email" class="inputtext" placeholder="someone@example.com">
+     <input type="password" class="inputtext" placeholder="password">
+     <input type="datetime" class="inputtext" placeholder="2024-01-01T01:01:60Z">
+     <!-- <input type="color" class="inputcolor" > -->
+    </div>
+    <h3>Date Input</h3>
+    <p>class 'inputdate' on any date type input</p>
+    <div class="item">
+     <input type="date" class="inputdate">
+     <input type="week" class="inputdate">
+     <input type="datetime-local" class="inputdate">
+    </div>
+   </div>
+  </div>
+  <!-- Input Showcase End   -->
+  <!-- Table Showcase Start -->
+  <div class="category m-t-2">
+   <div class="showitem">
+    <h2>Table</h2>
+    <h3>Classic</h3>
+    <p>Default styling, no class required, set table attribute, '< table cellspacing=0>...< / table>' for better
+       visual appearance. Hover effect is there by default.</p>
+    <div class="item">
+     <table cellspacing=0 class="shadow-default">
+      <thead>
+       <tr>
+        <th>Col Head 1</th>
+        <th>Col Head 2</th>
+        <th>Col Head 3</th>
+        <th>Col Head 4</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>Row Value 1</td>
+        <td>Row Value 2</td>
+        <td>Row Value 3</td>
+        <td>Row Value 4</td>
+       </tr>
+       <tr>
+        <td>Row Value 5</td>
+        <td>Row Value 6</td>
+        <td>Row Value 7</td>
+        <td>Row Value 8</td>
+       </tr>
+       <tr>
+        <td>Row Value 9</td>
+        <td>Row Value 10</td>
+        <td>Row Value 11</td>
+        <td>Row Value 12</td>
+       </tr>
+       <tr>
+        <td>Row Value 13</td>
+        <td>Row Value 14</td>
+        <td>Row Value 15</td>
+        <td>Row Value 16</td>
+       </tr>
+       <tr>
+        <td>Row Value 17</td>
+        <td>Row Value 18</td>
+        <td>Row Value 19</td>
+        <td>Row Value 20</td>
+       </tr>
+      </tbody>
+     </table>
+     <table cellspacing=2 class="shadow-default">
+      <thead>
+       <tr>
+        <th>Col Head 1</th>
+        <th>Col Head 2</th>
+        <th>Col Head 3</th>
+        <th>Col Head 4</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>Row Value 1</td>
+        <td>Row Value 2</td>
+        <td>Row Value 3</td>
+        <td>Row Value 4</td>
+       </tr>
+       <tr>
+        <td>Row Value 5</td>
+        <td>Row Value 6</td>
+        <td>Row Value 7</td>
+        <td>Row Value 8</td>
+       </tr>
+       <tr>
+        <td>Row Value 9</td>
+        <td>Row Value 10</td>
+        <td>Row Value 11</td>
+        <td>Row Value 12</td>
+       </tr>
+       <tr>
+        <td>Row Value 13</td>
+        <td>Row Value 14</td>
+        <td>Row Value 15</td>
+        <td>Row Value 16</td>
+       </tr>
+       <tr>
+        <td>Row Value 17</td>
+        <td>Row Value 18</td>
+        <td>Row Value 19</td>
+        <td>Row Value 20</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+
+    <h3>Green Table</h3>
+    <p>Green table color scheme</p>
+    <div class="item">
+     <table cellspacing=0 class="shadow-default table-theme-green">
+      <thead>
+       <tr>
+        <th>Col Head 1</th>
+        <th>Col Head 2</th>
+        <th>Col Head 3</th>
+        <th>Col Head 4</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>Row Value 1</td>
+        <td>Row Value 2</td>
+        <td>Row Value 3</td>
+        <td>Row Value 4</td>
+       </tr>
+       <tr>
+        <td>Row Value 5</td>
+        <td>Row Value 6</td>
+        <td>Row Value 7</td>
+        <td>Row Value 8</td>
+       </tr>
+       <tr>
+        <td>Row Value 9</td>
+        <td>Row Value 10</td>
+        <td>Row Value 11</td>
+        <td>Row Value 12</td>
+       </tr>
+       <tr>
+        <td>Row Value 13</td>
+        <td>Row Value 14</td>
+        <td>Row Value 15</td>
+        <td>Row Value 16</td>
+       </tr>
+       <tr>
+        <td>Row Value 17</td>
+        <td>Row Value 18</td>
+        <td>Row Value 19</td>
+        <td>Row Value 20</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+
+    <h3>Blue Table</h3>
+    <p>Blue table color scheme</p>
+    <div class="item">
+     <table cellspacing=0 class="shadow-default table-theme-blue">
+      <thead>
+       <tr>
+        <th>Col Head 1</th>
+        <th>Col Head 2</th>
+        <th>Col Head 3</th>
+        <th>Col Head 4</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>Row Value 1</td>
+        <td>Row Value 2</td>
+        <td>Row Value 3</td>
+        <td>Row Value 4</td>
+       </tr>
+       <tr>
+        <td>Row Value 5</td>
+        <td>Row Value 6</td>
+        <td>Row Value 7</td>
+        <td>Row Value 8</td>
+       </tr>
+       <tr>
+        <td>Row Value 9</td>
+        <td>Row Value 10</td>
+        <td>Row Value 11</td>
+        <td>Row Value 12</td>
+       </tr>
+       <tr>
+        <td>Row Value 13</td>
+        <td>Row Value 14</td>
+        <td>Row Value 15</td>
+        <td>Row Value 16</td>
+       </tr>
+       <tr>
+        <td>Row Value 17</td>
+        <td>Row Value 18</td>
+        <td>Row Value 19</td>
+        <td>Row Value 20</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </div>
+  <!-- Table Showcase End -->
+  <!-- Accordian Showcase Start -->
+  <div class="category m-t-2">
+   <div class="showitem">
+    <h2>Accordian</h2>
+    <h3>Classic</h3>
+    <p>Script Required</p>
+    <div class="item">
+     <div class="accordian shadow-default">
+      <button class="accordian-button" onclick="accexpand(this)">
+       <p>Show 1st item</p>
+       <p>&blacktriangledown;</p>
+      </button>
+      <div class="accordian-content">
+       <p>Some content inside <br>
+        the box. Another accordion content.
+       </p>
+      </div>
+     </div>
+     <div class="accordian shadow-default">
+      <button class="accordian-button" onclick="accexpand(this)">
+       <p>Show 2nd item</p>
+       <p>&blacktriangledown;</p>
+      </button>
+      <div class="accordian-content">
+       <p>Some content inside <br>
+        the box. Another accordion content.
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Accordian Showcase End -->
+  <!-- Badge Showcase Start -->
+  <div class="category m-t-2">
+   <div class="showitem">
+    <h2>Badge / Tags</h2>
+    <h3>Default</h3>
+    <p>Use Badges to inform or give stats.</p>
+    <div class="item-flex-jc-ac-row layout-bg-img">
+     <p class="badge-count">+99</p>
+     <p class="badge-info">info</p>
+     <p class="badge-warn">warning</p>
+     <p class="badge-error">error</p>
+     <p class="badge-success">success</p>
+    </div>
+   </div>
+  </div>
+  <!-- Badge Showcase Start -->
+  <!-- Card Showcase Start -->
+  <div class="category m-t-2">
+   <div class="showitem">
+    <h2>Card</h2>
+    <h3>Text Card</h3>
+    <p>Simple card with heading and paragraph</p>
+    <div class="item-flex-jc-ac-row">
+     <div class="card-text shadow-default" id="mock-card">
+      <h1>Earth 🌍</h1>
+      <p>Earth is the third planet from the<br> Sun and the only astronomical<br> object known to harbor life.
+       This<br> is enabled by Earth being a water<br> world, the only one in the Solar<br> System sustaining
+       liquid surface<br> water which life depends on. </p>
+      <a href="#mock-card" class="link-button place-self-center">Learn More</a>
+     </div>
+    </div>
+    <h3>Quote text card</h3>
+    <p>Text card for comments and quotes</p>
+    <div class="item-flex-jc-ac-row">
+     <div class="card-quote shadow-default">
+      <div class="card-quote-head">
+       <h1>Unity is strenght</h1>
+      </div>
+      <div class="card-quote-body">
+       <p>For fellow citizens:</p>
+       <p>&OpenCurlyDoubleQuote;Alone we are weak, united we are strong and unbreakable are our
+        bonds.&CloseCurlyDoubleQuote;</p>
+       <p>- John Doe</p>
+      </div>
+     </div>
+     <div class="card-quote shadow-default">
+      <div class="card-quote-head">
+       <h1>Amazing Product</h1>
+      </div>
+      <div class="card-quote-body">
+       <p>⭐⭐⭐⭐⭐</p>
+       <p>&OpenCurlyDoubleQuote;Never been unsatisfied with their unique unmatched quaity.&CloseCurlyDoubleQuote;
+       </p>
+       <p>- Anna Bergi</p>
+      </div>
+     </div>
+    </div>
+    <h3>Comment Card with avatar</h3>
+    <p>Similar to quote cards with a person's image.</p>
+    <div class="item">
+     <div class="card-comment shadow-default">
+      <div class="card-comment-head">
+       <img src="pexels-felix-mittermeier-956999.jpg" alt="">
+       <div>
+        <h1>Sharishth Singh</h1>
+       </div>
+      </div>
+      <div class="card-comment-body">
+       <p>A.I. will only replace people who don't adapt to changes around them. <br> With A.I. you are now a team
+        of two, if you are not distributing <br> your work responsibly you may get insecure about being
+        replaced.</p>
+      </div>
+     </div>
+    </div>
+    <h3>Card With Image</h3>
+    <p>Card having some image and description.</p>
+    <div class="item">
+     <div class="card-img-text shadow-default">
+      <div class="card-img-text-head">
+       <h1>The Stars</h1>
+      </div>
+      <div class="card-img-text-body">
+       <img src="pexels-felix-mittermeier-956999.jpg" alt="" style="height: 200px;">
+      </div>
+      <div class="card-img-text-footer">
+       <p>Photo of stars in clear sky at night.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Card Showcase End -->
+  <!-- Carousel Showcase End -->
+  <div class="category m-t-2">
+   <div class="showitem">
+    <h2>Carousel</h2>
+    <h3>Default</h3>
+    <p>Image slider</p>
+    <div class="item">
+     <div class="carousel">
+      <div class="img-slide-previous">
+       <button class="bg-glass-scheme button" onclick="carouselPrevImage(this)">&lessdot;</button>
+      </div>
+      <div class="carouselContentContainer">
+       <img src="./assets/1.jpg" alt="" height="250px" width="350">
+       <img src="./assets/2.jpg" alt="" height="250px" width="350">
+       <img src="./assets/3.jpg" alt="" height="250px" width="350">
+       <img src="./assets/4.jpg" alt="" height="250px" width="350">
+      </div>
+      <div class="img-slide-next">
+       <button class="bg-glass-scheme button" onclick="carouselNextImage(this)">&gtrdot;</button>
+      </div>
+     </div>
+    </div>
+    <h3>Any Slides</h3>
+    <p>Have any div inside (Needs to be enchanced for better UI).</p>
+    <div class="item">
+     <div class="carousel">
+      <div class="img-slide-previous">
+       <button class="bg-glass-scheme button" onclick="carouselPrevElementDiv(this)">&lessdot;</button>
+      </div>
+      <div class="carouselContentContainer">
+       <div class="carouselDiv">
+        <div class="card-quote shadow-default ">
+         <div class="card-quote-head">
+          <h1>Unity is strenght</h1>
+         </div>
+         <div class="card-quote-body">
+          <p>For fellow citizens:</p>
+          <p>&OpenCurlyDoubleQuote;Alone we are weak, united we are strong and unbreakable are our
+           bonds.&CloseCurlyDoubleQuote;</p>
+          <p>- John Doe</p>
+         </div>
+        </div>
+       </div>
+       <div class="carouselDiv">
+        <div class="card-quote shadow-default">
+         <div class="card-quote-head">
+          <h1>Amazing Product</h1>
+         </div>
+         <div class="card-quote-body">
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>&OpenCurlyDoubleQuote;Never been unsatisfied with their unique unmatched
+           quaity.&CloseCurlyDoubleQuote;</p>
+          <p>- Anna Bergi</p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="img-slide-next">
+       <button class="bg-glass-scheme button" onclick="carouselNextElementDiv(this)">&gtrdot;</button>
+      </div>
+     </div>
+    </div>
+    <h3>Auto Slide with interval</h3>
+    <p>Default interval between each element is 5 seconds or 5000 ms.
+     make sure to declare in pre script in head
+     simply by declaring constant "CarouselInterval" in millisecond units, it pauses on mouse hover and resumes on
+     mouse out.
+    </p>
+    <div class="item">
+     <div class="carouselAuto">
+      <script>
+       const CarouselInterval = 1500;
+      </script>
+      <div class="img-slide-previous">
+       <button class="bg-glass-scheme button" onclick="carouselAutoPrevElementDiv(this)">&lessdot;</button>
+      </div>
+      <div class="carouselContentContainer">
+       <div class="carouselDiv">
+        <div class="card-quote shadow-default ">
+         <div class="card-quote-head">
+          <h1>Unity is strenght</h1>
+         </div>
+         <div class="card-quote-body">
+          <p>For fellow citizens:</p>
+          <p>&OpenCurlyDoubleQuote;Alone we are weak, united we are strong.&CloseCurlyDoubleQuote;</p>
+          <p>- John Doe</p>
+         </div>
+        </div>
+       </div>
+       <div class="carouselDiv">
+        <div class="card-quote shadow-default">
+         <div class="card-quote-head">
+          <h1>Amazing Product</h1>
+         </div>
+         <div class="card-quote-body">
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>&OpenCurlyDoubleQuote;Never been unsatisfied.&CloseCurlyDoubleQuote;</p>
+          <p>- Anna Bergi</p>
+         </div>
+        </div>
+       </div>
+       <div class="carouselDiv">
+        <div class="card-quote shadow-default ">
+         <div class="card-quote-head">
+          <h1>Forgive but don't Forget</h1>
+         </div>
+         <div class="card-quote-body">
+          <p>For fellow netizens:</p>
+          <p>&OpenCurlyDoubleQuote;Else people will take advantage of your naivety.&CloseCurlyDoubleQuote;</p>
+          <p>- Appy Foz</p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="img-slide-next">
+       <button class="bg-glass-scheme button" onclick="carouselAutoNextElementDiv(this)">&gtrdot;</button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Carousel Showcase End -->
+  <!-- Bread crumb Showcase Start -->
+  <div class="category m-t-2" id="mockbread">
+   <div class="showitem">
+    <h2>Bread crumb</h2>
+    <h3>Default</h3>
+    <div class="item">
+     <div class="card-text ">
+      <ul class="bread">
+       <li class="crumbs"><a href="#mockbread">Home</a></li>
+       <li class="crumbs"><a href="#mockbread">About</a></li>
+       <li class="crumbs"><a href="#mockbread">Contanct Form</a></li>
+       <li class="crumbs"><a href="#mockbread">Submission Details</a></li>
+      </ul>
+     </div>
+    </div>
+    <h3>Direction Styles</h3>
+    <div class="item">
+     <div class="card-text" id="mockbread2">
+      <ul class="bread">
+       <li class="crumbs"><a href="#mockbread2">Home</a></li>
+       <li class="crumbs"><a href="#mockbread2">About</a></li>
+       <li class="crumbs crumbsTriangle"><a href="#mockbread2">Contanct Form</a></li>
+       <li class="crumbs crumbsArrow"><a href="#mockbread2">Submission Details</a></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Bread crumb Showcase End -->
+  <div class="category m-t-2">
+   <div class="showitem">
+    <h2>Navbar</h2>
+    <h3>Simple Default</h3>
+    <div class="item">
+     <header class="navbar">
+      <nav class="navWrapper">
+       <ul class="navList">
+        <li class="navItems"><a href="#">Home</a></li>
+        <li class="navItems"><a href="#">About</a></li>
+        <li class="navItems"><a href="#">Contact</a></li>
+       </ul>
+      </nav>
+     </header>
+    </div>
+    <h3>Window Size Responsive</h3>
+    <div class="item" id="navresp">
+     <header class="navbar NavResponsive">
+      <nav class="navWrapper">
+       <ul class="navList">
+        <li class="navItems"><a href="#navresp">Home</a></li>
+        <li class="navItems"><a href="#navresp">About</a></li>
+        <li class="navItems"><a href="#navresp">Contact</a></li>
+       </ul>
+       <button onclick="showNavItems(this)">☰</button>
+       <ul class="hiddenNavList">
+        <li class="navItems"><a href="#navresp">Home</a></li>
+        <li class="navItems"><a href="#navresp">About</a></li>
+        <li class="navItems"><a href="#navresp">Contact </a></li>
+       </ul>
+      </nav>
+     </header>
+    </div>
+    <h3>Responsive Nav with Logo</h3>
+    <div class="item" id="mocknavimg">
+     <header class="navbar NavResponsive">
+      <nav class="navWrapper">
+       <div class="navBrand">
+        <img src="pexels-felix-mittermeier-956999.jpg" alt="logo" class="navLogo">
+        <h1>Title</h1>
+       </div>
+       <ul class="navList">
+        <li class="navItems"><a href="#">Home</a></li>
+        <li class="navItems"><a href="#">Pricing</a></li>
+        <li class="navItems"><a href="#">About</a></li>
+        <li class="navItems"><a href="#">Contact</a></li>
+       </ul>
+       <button onclick="showNavItems(this)">☰</button>
+       <ul class="hiddenNavList">
+        <li class="navItems"><a href="#">Home</a></li>
+        <li class="navItems"><a href="#">About</a></li>
+        <li class="navItems"><a href="#">Contact</a></li>
+       </ul>
+      </nav>
+     </header>
+    </div>
+   </div>
+  </div>
+ </div>
+ <script src="script.js"></script>
 </body>
 
 </html>
