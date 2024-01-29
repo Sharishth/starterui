@@ -656,7 +656,7 @@ tbody > tr:nth-child(n):hover {
 
 /* carousel rules */
 
-.carousel {
+.carousel, .carouselAuto {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -678,11 +678,11 @@ tbody > tr:nth-child(n):hover {
   padding: 0;
 }
 
-.carousel > .carouselContentContainer > img {
+.carousel > .carouselContentContainer > img, .carouselAuto > .carouselContentContainer > img {
   border-radius: 8px;
 }
 
-.carousel > * > button {
+.carousel > * > button, .carouselAuto > * > button {
   font-size: 1.75rem;
 }
 
