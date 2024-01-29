@@ -51,3 +51,4 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 ### Carousel
   1. For Image
   2. For Any div content
+  3. For Any div content with default or user defined interval.
