@@ -4,6 +4,8 @@ Straightforward UI component library and styling rule set using HTML, CSS, and J
 
 Note: _layout.css should be ignored and is only there for formatting documentation of showcase._
 
+![Chrome Lighthouse score](lighthousescore.png)
+
 #### Next target 
   1. Carousel (with radio variant)
   2. Timeline
