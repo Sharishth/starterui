@@ -83,7 +83,7 @@ function updateCarousel(images, currentIndex) {
   carousel.currentIndex = currentIndex; // Update currentIndex in the carousel object
   updateCarousel(images, currentIndex);
  }
- ////
+ // Carousel div function
  function updateCarouselDiv(elements, currentIndex) {
   elements.forEach((el, index) => {
    el.style.display = index === currentIndex ? 'block' : 'none';
@@ -119,3 +119,69 @@ function updateCarousel(images, currentIndex) {
   carousel.currentIndex = currentIndex; // Update currentIndex in the carousel object
   updateCarouselDiv(elements, currentIndex);
  }
+
+// Carousel Auto Div
+function updateAutoCarouselDiv(elements, currentIndex) {
+  elements.forEach((el, index) => {
+    el.style.display = index === currentIndex ? 'block' : 'none';
+  });
+}
+
+function carouselAutoPrevElementDiv(button) {
+  const carousel = button.closest('.carouselAuto');
+  let currentIndex = carousel.currentIndex || 0;
+  let elements = carousel.elements;
+
+  if (!elements) {
+    elements = Array.from(carousel.querySelectorAll('.carouselContentContainer .carouselDiv'));
+    carousel.elements = elements; // Store elements array in carousel object
+  }
+
+  currentIndex = (currentIndex - 1 + elements.length) % elements.length;
+  carousel.currentIndex = currentIndex; // Update currentIndex in the carousel object
+  updateAutoCarouselDiv(elements, currentIndex);
+}
+
+function carouselAutoNextElementDiv(button) {
+  const carousel = button.closest('.carouselAuto');
+  let currentIndex = carousel.currentIndex || 0;
+  let elements = carousel.elements;
+
+  if (!elements) {
+    elements = Array.from(carousel.querySelectorAll('.carouselContentContainer .carouselDiv'));
+    carousel.elements = elements; // Store elements array in carousel object
+  }
+
+  currentIndex = (currentIndex + 1) % elements.length;
+  carousel.currentIndex = currentIndex; // Update currentIndex in the carousel object
+  updateAutoCarouselDiv(elements, currentIndex);
+}
+
+function startAutoSlide(carousel) {
+  carousel.autoSlideInterval = setInterval(() => {
+    carouselAutoNextElementDiv(carousel.querySelector('.img-slide-next button'));
+  }, typeof CarouselInterval !== 'undefined' ? CarouselInterval : 500); // Use CarouselInterval or default to 5000 milliseconds
+}
+
+// Start auto sliding when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const autoCarousel = document.querySelector('.carouselAuto');
+  startAutoSlide(autoCarousel);
+});
+
+// auto interupt for carousel is disabled or commented below
+
+
+function stopAutoSlide(carousel) {
+  clearInterval(carousel.autoSlideInterval);
+}
+
+// Optionally, you can stop auto sliding when the user interacts with the carousel
+document.querySelector('.carouselAuto').addEventListener('mouseover', function() {
+  stopAutoSlide(this);
+});
+
+document.querySelector('.carouselAuto').addEventListener('mouseout', function() {
+  startAutoSlide(this);
+});
+//
