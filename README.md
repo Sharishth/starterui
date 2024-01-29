@@ -6,18 +6,16 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 
 #### Next target 
   1. Carousel (with radio variant)
-  2. Breadcrumbs
-  3. Navbar
-  4. Timeline
-  5. Pagination
-  6. Input - radio
-  7. Input - range
-  8. Checkbox (Toggle variant)
-  9. Divider (Vertical and Horizontal, and with text)
-  10. Drawer
-  11. Footer page (landing template)
-  12. Code
-  13. Mock Browser (Desktop and phone)
+  2. Timeline
+  3. Pagination
+  4. Input - radio
+  5. Input - range
+  6. Checkbox (Toggle variant)
+  7. Divider (Vertical and Horizontal, and with text)
+  8. Drawer
+  9. Footer page (landing template)
+  10. Code
+  11. Mock Browser (Desktop and phone)
 
 ## Components Till now
 ### Action
@@ -52,3 +50,12 @@ Note: _layout.css should be ignored and is only there for formatting documentati
   1. For Image
   2. For Any div content
   3. For Any div content with default or user defined interval.
+
+### Bread Crumb
+  1. Default
+  2. Custom direction sign
+
+### Navbar
+  1. Simple Default
+  2. Window Size Responsive
+  3. Responsive Nav with Logo
