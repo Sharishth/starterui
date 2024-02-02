@@ -7,17 +7,16 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 ![Chrome Lighthouse score](lighthousescore.png)
 
 #### Next target 
-  1. Carousel (with radio variant)
-  2. Timeline
-  3. Pagination
-  4. Input - radio
-  5. Input - range
-  6. Checkbox (Toggle variant)
-  7. Divider (Vertical and Horizontal, and with text)
-  8. Drawer
-  9. Footer page (landing template)
-  10. Code
-  11. Mock Browser (Desktop and phone)
+  1. Carousel radio variant
+  2. Pagination
+  3. Input - radio
+  4. Input - range
+  5. Checkbox (Toggle variant)
+  6. Divider (Vertical and Horizontal, and with text)
+  7. Drawer
+  8. Footer page (landing template)
+  9. Code
+  10. Mock Browser (Desktop and phone)
 
 ## Components Till now
 ### Action
