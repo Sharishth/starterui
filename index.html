@@ -610,22 +610,24 @@
      <header class="navbar NavResponsive">
       <nav class="navWrapper">
        <ul class="navList">
-        <li class="navItems"><a href="#navresp">Home</a></li>
-        <li class="navItems"><a href="#navresp">About</a></li>
-        <li class="navItems"><a href="#navresp">Contact</a></li>
+        <li class="navItems"><a href="#">Home</a></li>
+        <li class="navItems"><a href="#">About</a></li>
+        <li class="navItems"><a href="#">Contact</a></li>
        </ul>
-       <button onclick="showNavItems(this)">☰</button>
-       <ul class="hiddenNavList">
-        <li class="navItems"><a href="#navresp">Home</a></li>
-        <li class="navItems"><a href="#navresp">About</a></li>
-        <li class="navItems"><a href="#navresp">Contact </a></li>
-       </ul>
+       <div class="navActions">
+        <button onclick="showNavItems(this)">☰</button>
+        <ul class="hiddenNavList">
+         <li class="navItems"><a href="#">Home</a></li>
+         <li class="navItems"><a href="#">About</a></li>
+         <li class="navItems"><a href="#">Contact </a></li>
+        </ul>
+       </div>
       </nav>
      </header>
     </div>
     <h3>Responsive Nav with Logo</h3>
     <div class="item" id="mocknavimg">
-     <header class="navbar NavResponsive">
+     <header class="navbar NavResponsive" id="sticknav">
       <nav class="navWrapper">
        <div class="navBrand">
         <img src="pexels-felix-mittermeier-956999.jpg" alt="logo" class="navLogo">
@@ -637,14 +639,105 @@
         <li class="navItems"><a href="#">About</a></li>
         <li class="navItems"><a href="#">Contact</a></li>
        </ul>
-       <button onclick="showNavItems(this)">☰</button>
-       <ul class="hiddenNavList">
-        <li class="navItems"><a href="#">Home</a></li>
-        <li class="navItems"><a href="#">About</a></li>
-        <li class="navItems"><a href="#">Contact</a></li>
-       </ul>
+       <div class="navActions">
+        <button onclick="showNavItems(this)">☰</button>
+        <ul class="hiddenNavList">
+         <li class="navItems"><a href="#">Home</a></li>
+         <li class="navItems"><a href="#">About</a></li>
+         <li class="navItems"><a href="#">Contact</a></li>
+        </ul>
+       </div>
       </nav>
      </header>
+    </div>
+    <h3>Sticky Navbar</h3>
+    <div class="item">
+     <div class="card card-text mock-height-20rem p-0 br-rad-0">
+      <header class="navbar NavResponsive sticky-top">
+       <nav class="navWrapper">
+        <div class="navBrand">
+         <img src="pexels-felix-mittermeier-956999.jpg" alt="logo" class="navLogo">
+         <h1>Title</h1>
+        </div>
+        <ul class="navList">
+         <li class="navItems"><a href="#">Home</a></li>
+         <li class="navItems"><a href="#">Pricing</a></li>
+         <li class="navItems"><a href="#">About</a></li>
+         <li class="navItems"><a href="#">Contact</a></li>
+        </ul>
+        <div class="navActions">
+         <button onclick="showNavItems(this)">☰</button>
+         <ul class="hiddenNavList">
+          <li class="navItems"><a href="#">Home</a></li>
+          <li class="navItems"><a href="#">About</a></li>
+          <li class="navItems"><a href="#">Contact</a></li>
+         </ul>
+        </div>
+       </nav>
+      </header>
+      <div class="flex-jc-ac-col m-t-4">
+       <img src="assets/1.jpg" alt="Sample Image" width="200px">
+       <img src="assets/2.jpg" alt="Sample Image" width="200px">
+       <img src="assets/3.jpg" alt="Sample Image" width="200px">
+       <img src="assets/4.jpg" alt="Sample Image" width="200px">
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="category m-t-2">
+   <div class="showitem">
+    <h2>Timeline</h2>
+    <h3>Default</h3>
+    <p>Using List elements</p>
+    <div class="item">
+     <div class="card card-text">
+      <!-- <div class="timelineContainer"> -->
+      <ul class="timeline">
+       <li>
+        <div class="timelineItems timelineDone">1</div>
+       </li>
+       <li>
+        <div class="timelineItems timelineDone">2</div>
+       </li>
+       <li>
+        <div class="timelineItems timelineActive">3</div>
+       </li>
+       <li>
+        <div class="timelineItems">4</div>
+       </li>
+      </ul>
+      <!-- </div> -->
+     </div>
+    </div>
+    <h3>Div Custom</h3>
+    <p>Using Divs</p>
+    <div class="item">
+     <div class="timelinediv">
+      <div class="timelinedivItem ">
+       <p class="timelineAtdate">01-01-2024</p>
+       <p class="timelineAtPlace timelineDone shadow-default">Stop 1</p>
+       <p class="timelineAtTime">10:30 P.M.</p>
+      </div>
+      <div class="timelinedivconnector timelineDone shadow-default"></div>
+      <div class="timelinedivItem">
+       <p class="timelineAtdate">02-01-2024</p>
+       <p class="timelineAtPlace timelineDone shadow-default">Stop 2</p>
+       <p class="timelineAtTime">10:30 P.M.</p>
+      </div>
+      <div class="timelinedivconnector timelineToactive shadow-default"></div>
+      <div class="timelinedivItem">
+       <p class="timelineAtdate">04-01-2024</p>
+       <p class="timelineAtPlace timelineActive shadow-default">Stop 3</p>
+       <p class="timelineAtTime">10:30 P.M.</p>
+      </div>
+      <div class="timelinedivconnector shadow-default"></div>
+      <div class="timelinedivItem">
+       <p class="timelineAtPlace shadow-default">Stop 4</p>
+       <p class="timelineAtdate"></p>
+       <p class="timelineAtTime"></p>
+      </div>
+     </div>
     </div>
    </div>
   </div>
