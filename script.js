@@ -194,7 +194,7 @@ function showNavItems(button) {
 }
 
 function resetButtonTexts() {
- const buttons = document.querySelectorAll('.NavResponsive button');
+ const buttons = document.querySelectorAll('.NavResponsive .navActions button');
  buttons.forEach(button => button.innerText = '☰');
 }
 
