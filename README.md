@@ -17,6 +17,9 @@ Note: _layout.css should be ignored and is only there for formatting documentati
   8. Footer page (landing template)
   9. Code
   10. Mock Browser (Desktop and phone)
+  11. Flex templates
+  12. Grid templates
+  13. Hero
 
 ## Components Till now
 ### Action
