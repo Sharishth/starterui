@@ -65,14 +65,14 @@ Note: _layout.css should be ignored and is only there for formatting documentati
   3. Responsive Nav with Logo
   4. Sticky Navbar
 
-### Timeline
-  1. Default List based
-  2. Custom styling
-
 ### Navbar
   1. Simple Default
   2. Window Size Responsive
   3. Responsive Nav with Logo
+
+### Timeline
+  1. Default List based
+  2. Custom styling
 
 ### Tabs
   1. Default
