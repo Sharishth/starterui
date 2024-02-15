@@ -227,26 +227,32 @@ window.addEventListener('resize', handleScreenWidth);
 // Tab functions
 // JavaScript function to show/hide tab content
 function showTab(event) {
- const tabBar = event.currentTarget; // Get the clicked tab bar container
- const tabButtons = tabBar.querySelectorAll(".tab");
- const tabContents = tabBar.nextElementSibling.querySelectorAll(".tabContent");
- const clickedButton = event.target;
- const index = Array.from(tabButtons).indexOf(clickedButton);
+  const tabBar = event.currentTarget; // Get the clicked tab bar container
+  const tabButtons = tabBar.querySelectorAll(".tab");
+  const tabContents = tabBar.nextElementSibling.querySelectorAll(".tabContent");
+  const clickedButton = event.target;
 
- // Hide all tab contents within the same container
- tabContents.forEach(content => {
-   content.style.display = "none";
- });
+  // Check if the clicked element is a tab button
+  if (!clickedButton.classList.contains("tab")) {
+    return; // Do nothing if the clicked element is not a tab button
+  }
 
- // Show the corresponding tab content
- tabContents[index].style.display = "block";
+  const index = Array.from(tabButtons).indexOf(clickedButton);
 
- // Reset active state for all tab buttons within the same container
- tabButtons.forEach(btn => {
-   btn.classList.remove("tabActive");
- });
+  // Hide all tab contents within the same container
+  tabContents.forEach(content => {
+    content.style.display = "none";
+  });
 
- // Set active state for the clicked tab button
- clickedButton.classList.add("tabActive");
+  // Show the corresponding tab content
+  tabContents[index].style.display = "block";
+
+  // Reset active state for all tab buttons within the same container
+  tabButtons.forEach(btn => {
+    btn.classList.remove("tabActive");
+  });
+
+  // Set active state for the clicked tab button
+  clickedButton.classList.add("tabActive");
 }
 // Tab functions end
