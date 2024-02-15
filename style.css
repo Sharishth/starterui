@@ -419,6 +419,32 @@ input[type="checkbox"]:active {
  background-repeat: no-repeat !important;
 }
 
+.labelCheckbox {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 4px;
+  transition: all 0.1s ease-in-out;
+}
+
+.labelCheckbox:active {
+  outline: none;
+  transform: scale(0.9);
+}
+
+.inputChkLabel {
+  display: none;
+}
+
+.inputChkLabel:checked + .labelCheckbox{
+  background-image: url('./icons8-tick.svg');
+  background-position: center;
+  background-size: contain;
+  background-color: lightgreen;
+  border-color: lightgreen;
+}
+
 /* Default Table */
 
 table {
@@ -1000,3 +1026,66 @@ p.timelineAtPlace:not(.timelineActive):not(.timelineDone):not(:is()) {
 }
 
 /* Timeline div rules */
+
+/* Tab Rules */
+.tabs {
+  background-color: #eee;
+  border-radius: 6px;
+}
+
+.tabBar {
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  background-color: #dddddd;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* .tabBar > button:first-of-type {
+  border-top-left-radius: 6px;
+}
+
+.tabBar > button:last-of-type {
+  border-top-right-radius: 6px;
+} */
+
+.tabBar > button {
+  border: none;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.158);
+}
+
+.tabBar > button:is(.tabActive) {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.267);
+}
+
+.tabBar > button:hover {
+  cursor: pointer;
+}
+
+.tabBar > button:not(.tabActive) {
+  background-color: rgb(207, 207, 207);
+}
+
+.tabBar > button:not(.tabActive):hover {
+  background-color: gray;
+}
+/* .tabBar > button:not(:last-of-type) {
+  border-right: 1px solid rgb(194, 194, 194);
+} */
+
+.tabBody {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tabBody > .tabContent:not(:first-of-type) {
+  display: none;
+}
+/* Tab Rules */
