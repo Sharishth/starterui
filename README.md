@@ -73,3 +73,7 @@ Note: _layout.css should be ignored and is only there for formatting documentati
   1. Simple Default
   2. Window Size Responsive
   3. Responsive Nav with Logo
+
+### Tabs
+  1. Default
+
