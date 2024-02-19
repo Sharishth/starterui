@@ -15,7 +15,7 @@ Note: _layout.css should be ignored and is only there for formatting documentati
   6. Grid templates
   7. Hero
 
-## Components Till now
+## Components Till now (19-02-2024)
 ### Action
   1. Button and variants
   2. Dropdown
