@@ -8,18 +8,12 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 
 #### Next target 
   1. Carousel radio variant
-  2. Pagination
-  3. Input - radio
-  4. Input - range
-  5. Checkbox (Toggle variant)
-  6. Divider (Vertical and Horizontal, and with text)
-  7. Drawer
-  8. Footer page (landing template)
-  9. Code
-  10. Mock Browser (Desktop and phone)
-  11. Flex templates
-  12. Grid templates
-  13. Hero
+  2. Divider (Vertical and Horizontal, and with text)
+  3. Drawer
+  4. Footer page (landing template)
+  5. Flex templates
+  6. Grid templates
+  7. Hero
 
 ## Components Till now
 ### Action
@@ -77,3 +71,23 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 ### Tabs
   1. Default
 
+### Range
+  1. Default
+
+### Code
+  1. Default
+
+### Mock Browser
+  1. Desktop
+  2. Mobile
+
+### Pagination
+  1. Default
+  2. Styled with custom dropdown
+
+### Input Radio
+  1. Default
+  2. Colored
+
+### Toggle
+  1. Default
