@@ -61,9 +61,48 @@
  outline: none;
 }
 
+/* Dimension Rules */
+.w-100 {
+ width: 100%;
+}
+
+.w-min-con {
+ width: min-content;
+}
+
+.w-max-con {
+ width: max-content;
+}
+
+.w-fit-con {
+ width: fit-content;
+}
+
+.h-100 {
+ height: 100%;
+}
+
+.h-min-con {
+ height: min-content;
+}
+
+.h-max-con {
+ height: max-content;
+}
+
+.h-fit-con {
+ height: fit-content;
+}
+
+/* Dimension Rules */
+
 /* Border Rules */
 .br-rad-0 {
  border-radius: 0 !important;
+}
+
+.br-rad-5 {
+ border-radius: 5% !important;
 }
 
 .br-rad-10 {
@@ -115,6 +154,29 @@
 
 /* Flex Rules */
 
+/* z-indexing */
+.z-index-n1 {
+ z-index: -1 !important;
+}
+
+.z-index-0 {
+ z-index: 0 !important;
+}
+
+.z-index-1 {
+ z-index: 1 !important;
+}
+
+.z-index-2 {
+ z-index: 2 !important;
+}
+
+.z-index-3 {
+ z-index: 3 !important;
+}
+
+/* z-indexing */
+
 /* height and width rules */
 
 .h-1 {
@@ -144,6 +206,34 @@
 /* increase height and width by same ration */
 
 /* Margin Rules */
+
+.m-0 {
+ margin: 0;
+}
+
+.m-1 {
+ margin: 1%;
+}
+
+.m-2 {
+ margin: 2%;
+}
+
+.m-3 {
+ margin: 3%;
+}
+
+.m-4 {
+ margin: 4%;
+}
+
+.m-5 {
+ margin: 5%;
+}
+
+.m-6 {
+ margin: 6%;
+}
 
 .m-t-0 {
  margin-top: 0;
@@ -1536,4 +1626,105 @@ input[type="checkbox"]:checked+.toogle-switch {
  transform: translateX(1.5rem);
  transition: 0.4s;
 }
+
 /* Toggle Rules */
+
+/* Divider Rules */
+.divider-hr {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-items: center;
+ /* gap: 8px; */
+ color: gray;
+ -webkit-user-select: none;
+ /* Safari */
+ -ms-user-select: none;
+ /* IE 10 and IE 11 */
+ user-select: none;
+}
+
+.divider-hr>div {
+ height: 1px;
+ width: 100%;
+ background-color: lightgray;
+}
+
+.divider-hr>p {
+ margin: 0 6px;
+}
+
+.divider-vr {
+ display: flex;
+ flex-direction: column;
+ flex-wrap: nowrap;
+ color: gray;
+ height: 100%;
+ -webkit-user-select: none;
+ /* Safari */
+ -ms-user-select: none;
+ /* IE 10 and IE 11 */
+ user-select: none;
+ align-items: center;
+}
+
+.divider-vr>div {
+ /* position: relative; Added */
+ /* height: 100px; */
+ width: 1px;
+ background-color: lightgray;
+}
+
+.divider-vr>p {
+ margin: 2px 0;
+}
+
+/* Divider Rules */
+
+/* Drawer Rules */
+.drawer-wrapper {
+ background-color: rgba(0, 0, 0, 0.75);
+ backdrop-filter: blur(4px);
+ z-index: 2;
+ position: absolute;
+ display: none;
+}
+
+.drawer {
+ width: max-content;
+ padding: 1rem;
+ background-color: white;
+ display: flex;
+ flex-direction: column;
+ overflow-y: auto;
+ transform: translateX(-100%);
+}
+
+.slidedrawer {
+ transition: 0.25s;
+ transform: translateX(0%);
+}
+
+.drawer>button {
+ position: sticky;
+ top: 0;
+}
+
+.drawer::-webkit-scrollbar {
+ width: 8px;
+}
+
+.drawer::-webkit-scrollbar-track {
+ background: #f1f1f1;
+}
+
+.drawer::-webkit-scrollbar-thumb {
+ background: #ccc;
+ border-radius: 6px;
+}
+
+.drawer::-webkit-scrollbar-thumb:hover {
+ background: #bbb;
+}
+
+/* Drawer Rules */
