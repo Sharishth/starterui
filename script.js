@@ -1,3 +1,4 @@
+// Dropdown Function
 function dropdown(button) {
  const options = button.nextElementSibling;
 
@@ -19,6 +20,7 @@ function setOptionValue(button, value) {
   document.getElementById("showoutputtext").value = value + ' selected'; // optional
  }
 }
+//Dropdown Function
 
 // checkbox function
 function changeCheckboxValue(checkbox) {
@@ -227,32 +229,95 @@ window.addEventListener('resize', handleScreenWidth);
 // Tab functions
 // JavaScript function to show/hide tab content
 function showTab(event) {
-  const tabBar = event.currentTarget; // Get the clicked tab bar container
-  const tabButtons = tabBar.querySelectorAll(".tab");
-  const tabContents = tabBar.nextElementSibling.querySelectorAll(".tabContent");
-  const clickedButton = event.target;
+ const tabBar = event.currentTarget; // Get the clicked tab bar container
+ const tabButtons = tabBar.querySelectorAll(".tab");
+ const tabContents = tabBar.nextElementSibling.querySelectorAll(".tabContent");
+ const clickedButton = event.target;
 
-  // Check if the clicked element is a tab button
-  if (!clickedButton.classList.contains("tab")) {
-    return; // Do nothing if the clicked element is not a tab button
-  }
+ // Check if the clicked element is a tab button
+ if (!clickedButton.classList.contains("tab")) {
+  return; // Do nothing if the clicked element is not a tab button
+ }
 
-  const index = Array.from(tabButtons).indexOf(clickedButton);
+ const index = Array.from(tabButtons).indexOf(clickedButton);
 
-  // Hide all tab contents within the same container
-  tabContents.forEach(content => {
-    content.style.display = "none";
-  });
+ // Hide all tab contents within the same container
+ tabContents.forEach(content => {
+  content.style.display = "none";
+ });
 
-  // Show the corresponding tab content
-  tabContents[index].style.display = "block";
+ // Show the corresponding tab content
+ tabContents[index].style.display = "block";
 
-  // Reset active state for all tab buttons within the same container
-  tabButtons.forEach(btn => {
-    btn.classList.remove("tabActive");
-  });
+ // Reset active state for all tab buttons within the same container
+ tabButtons.forEach(btn => {
+  btn.classList.remove("tabActive");
+ });
 
-  // Set active state for the clicked tab button
-  clickedButton.classList.add("tabActive");
+ // Set active state for the clicked tab button
+ clickedButton.classList.add("tabActive");
 }
 // Tab functions end
+
+// Vertical devider set height
+window.addEventListener('DOMContentLoaded', function () {
+ // Get the parent element
+ var dividerParent = document.querySelector('.divider-vr').parentElement;
+
+ // Calculate half of the parent's height including padding
+ var computedStyles = window.getComputedStyle(dividerParent);
+ var parentHeightWithPadding = dividerParent.offsetHeight +
+  parseInt(computedStyles.getPropertyValue('padding-top')) +
+  parseInt(computedStyles.getPropertyValue('padding-bottom'));
+ var halfParentHeight = parentHeightWithPadding / 3.5;
+
+ // Set the height of .divider-vr > div elements to half of the parent's height
+ var dividerDivs = document.querySelectorAll('.divider-vr > div');
+ dividerDivs.forEach(function (div) {
+  div.style.height = halfParentHeight + 'px';
+ });
+});
+// Vertical devider set height
+
+// Drawer function
+function openDrawer(x, a) {
+ setDrawerDimensions()
+ const y = document.getElementById(x);
+ y.style.display = 'block';
+ const b = document.getElementById(a);
+ b.classList.add('slidedrawer');
+}
+function closeDrawer(x, a) {
+ const y = document.getElementById(x);
+ y.classList.remove('slidedrawer');
+ y.style.display = 'none';
+ const b = document.getElementById(a);
+ b.classList.add('slidedrawer');
+}
+
+function setDrawerDimensions() {
+ // Get the parent element of '.drawer-wrapper'
+ var d_drawerParent = document.querySelector('.drawer-wrapper').parentElement;
+
+ // Get the computed styles of the parent element
+ var d_parentStyles = window.getComputedStyle(d_drawerParent);
+
+ // Get the height and width of the parent element
+ var d_parentHeight = parseFloat(d_parentStyles.getPropertyValue('height'));
+ var d_parentWidth = parseFloat(d_parentStyles.getPropertyValue('width'));
+
+ // Set the height and width of '.drawer-wrapper' to match the parent element
+ var d_drawerWrapper = document.querySelector('.drawer-wrapper');
+ var d_drawer = document.querySelector('.drawer');
+ d_drawerWrapper.style.height = d_parentHeight + 'px';
+ d_drawerWrapper.style.width = d_parentWidth + 'px';
+ d_parentHeight = d_parentHeight - 32
+ d_drawer.style.height = d_parentHeight + 'px';
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+ setDrawerDimensions()
+})
+
+window.addEventListener('resize', setDrawerDimensions());
+// Drawer function
