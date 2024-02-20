@@ -7,13 +7,10 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 ![Chrome Lighthouse score](lighthousescore.png)
 
 #### Next target 
-  1. Carousel radio variant
-  2. Divider (Vertical and Horizontal, and with text)
-  3. Drawer
-  4. Footer page (landing template)
-  5. Flex templates
-  6. Grid templates
-  7. Hero
+  1. Footer page (landing template)
+  2. Flex templates
+  3. Grid templates
+  4. Hero
 
 ## Components Till now (19-02-2024)
 ### Action
@@ -90,4 +87,11 @@ Note: _layout.css should be ignored and is only there for formatting documentati
   2. Colored
 
 ### Toggle
+  1. Default
+
+### Dividers (with and without text)
+  1. Horizontal
+  2. Vertical
+
+### Drawer
   1. Default
