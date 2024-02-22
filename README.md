@@ -9,7 +9,7 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 #### Next target 
   1. Experimental Typography Rules
 
-## Components Till now (20-02-2024)
+## Components Till now (22-02-2024)
 ### Action
   1. Button and variants
   2. Dropdown
