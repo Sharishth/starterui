@@ -5,6 +5,19 @@
  --success-color: lightgreen;
 }
 
+.user-select-none {
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
+/* Background Rules */
+.backdrop-darken {
+ backdrop-filter: brightness(0.75);
+}
+
+/* Background Rules */
+
 /* Color and Background Color Rules */
 .info-color {
  color: var(--info-color);
@@ -39,15 +52,23 @@
 }
 
 .bg-white {
- background-color: white;
+ background-color: white !important;
 }
 
 .bg-black {
- background-color: black;
+ background-color: black !important;
+}
+
+.bg-gray {
+ background-color: #555 !important;
 }
 
 .text-black {
  color: black !important;
+}
+
+.text-white {
+ color: white !important;
 }
 
 /* Color and Background Color Rules */
@@ -97,6 +118,10 @@
 /* Dimension Rules */
 
 /* Border Rules */
+.br-rad-inherit {
+ border-radius: inherit;
+}
+
 .br-rad-0 {
  border-radius: 0 !important;
 }
@@ -125,6 +150,18 @@
  border-radius: 6px !important;
 }
 
+.br-rad-8px {
+ border-radius: 8px !important;
+}
+
+.br-rad-10px {
+ border-radius: 10px !important;
+}
+
+.ring-1 {
+ outline: 0.5px dashed #ccc;
+}
+
 /* Border Rules */
 
 /* Position rules */
@@ -136,12 +173,18 @@
 /* Position rules */
 
 /* Flex Rules */
+.flex-jc-ac {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
 .flex-jc-ac-col {
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
- gap: 1rem;
+ /* gap: 1rem; */
 }
 
 .flex-jc-ac-row {
@@ -149,6 +192,26 @@
  flex-direction: row;
  justify-content: center;
  align-items: center;
+ /* gap: 1rem; */
+}
+
+.f-wrap {
+ flex-wrap: wrap;
+}
+
+.align-self-stretch {
+ align-self: stretch !important;
+}
+
+.gap-0 {
+ gap: 0 !important;
+}
+
+.gap-05r {
+ gap: 0.5rem;
+}
+
+.gap-1r {
  gap: 1rem;
 }
 
@@ -235,6 +298,10 @@
  margin: 6%;
 }
 
+.m-t-a {
+ margin-top: auto;
+}
+
 .m-t-0 {
  margin-top: 0;
 }
@@ -265,6 +332,10 @@
 
 /*  */
 
+.m-b-a {
+ margin-bottom: auto;
+}
+
 .m-b-0 {
  margin-bottom: 0;
 }
@@ -291,6 +362,24 @@
 
 .m-b-6 {
  margin-bottom: 6%;
+}
+
+/*  */
+
+.m-l-0 {
+ margin-left: 0;
+}
+
+.m-l-a {
+ margin-left: auto;
+}
+
+.m-r-0 {
+ margin-right: 0;
+}
+
+.m-r-a {
+ margin-right: auto;
 }
 
 /* Margin Rules */
@@ -349,6 +438,18 @@
 .p-x-5 {
  padding-left: 5% !important;
  padding-right: 5% !important;
+}
+
+.p-1r {
+ padding: 1rem;
+}
+
+.p-2r {
+ padding: 2rem;
+}
+
+.p-3r {
+ padding: 3rem;
 }
 
 /* Paddin Rules */
@@ -980,7 +1081,7 @@ tbody>tr:nth-child(n):hover {
 /* Navbar Rules*/
 .navbar {
  width: 100%;
- background: rgb(240, 240, 240);
+ background-color: rgb(240, 240, 240);
 }
 
 .navWrapper:not(:has(.navBrand)) {
@@ -1728,3 +1829,147 @@ input[type="checkbox"]:checked+.toogle-switch {
 }
 
 /* Drawer Rules */
+
+/* Flex template rules */
+@media screen and (max-width: 768px) {
+ .flex-jc-ac-row {
+  flex-wrap: wrap;
+ }
+}
+
+/* Flex template rules */
+
+/* Grid template rules */
+.grid {
+ display: grid;
+}
+
+.grid-row-1 {
+ grid-row: 1;
+}
+
+.grid-row-2 {
+ grid-row: 2;
+}
+
+.grid-row-3 {
+ grid-row: 3;
+}
+
+.grid-row-4 {
+ grid-row: 4;
+}
+
+.grid-col-1 {
+ grid-column: 1;
+}
+
+.grid-col-2 {
+ grid-column: 2;
+}
+
+.grid-col-3 {
+ grid-column: 3;
+}
+
+.grid-col-4 {
+ grid-column: 4;
+}
+
+.grid-col-5 {
+ grid-column: 5;
+}
+
+.grid-col-6 {
+ grid-column: 6;
+}
+
+.grid-col-span-1 {
+ grid-column: span 1;
+}
+
+.grid-col-span-2 {
+ grid-column: span 2;
+}
+
+.grid-col-span-3 {
+ grid-column: span 3;
+}
+
+.grid-col-span-4 {
+ grid-column: span 4;
+}
+
+.grid-row-span-1 {
+ grid-row: span 1;
+}
+
+.grid-row-span-2 {
+ grid-row: span 2;
+}
+
+.grid-row-span-3 {
+ grid-row: span 3;
+}
+
+.grid-row-span-4 {
+ grid-row: span 4;
+}
+
+.justify-self-start {
+ justify-self: start;
+}
+
+.justify-self-center {
+ justify-self: center;
+}
+
+.justify-self-end {
+ justify-self: end;
+}
+
+.align-self-start {
+ align-self: start;
+}
+
+.align-self-center {
+ align-self: center;
+}
+
+.align-self-end {
+ align-self: end;
+}
+
+.grid-col-2-1-1 {
+ grid-template-columns: 2fr 1fr 1fr;
+}
+
+.grid-col-auto-auto {
+ grid-template-columns: auto auto;
+}
+
+.grid-col-auto-auto-auto {
+ grid-template-columns: auto auto auto;
+}
+
+.grid-col-auto-auto-auto-auto {
+ grid-template-columns: auto auto auto auto;
+}
+
+.grid-col-1-1 {
+ grid-template-columns: 1fr 1fr;
+}
+
+.grid-col-1-2 {
+ grid-template-columns: 1fr 2fr;
+}
+
+.grid-col-2-1 {
+ grid-template-columns: 2fr 1fr;
+}
+
+.justify-content-end {
+ justify-content: end;
+}
+
+/* Grid template rules */
