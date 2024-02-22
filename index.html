@@ -1343,14 +1343,14 @@
    <p>Grid template includes limited but neccessary single attribute classes to help you design simple grid layout like
     footer or rows with custom layouts. Gap rules are same as flex. <br><br> &ThickSpace; "grid-col-span-x" is a single
     attribute class to help you span your grid item for a column where "x" should be from 1 to 4. <br><br> &ThickSpace;
-    "grid-col-x" and "grid-row-x" is for item's placement in grid layout where "x" should be from 1 to 4. <br><br>
+    "grid-col-x" and "grid-row-x" is for item's placement in grid layout where "x" should be from 1 to 6. <br><br>
     &ThickSpace; "justify-self-pos" and "align-self-pos" is for items where "pos" should be "start", "end" or "center".
     <br><br> While you can utilize these to create the most essential layouts, you can also utilize the template classes
     provided by the CSS.
    </p>
    <div class="showitem">
     <h3>2 column grid</h3>
-    <div class="item">
+    <div class="item user-select-none">
      <div class="bg-white p-1r">
       <div class="grid bg-white gap-1r ring-1 p-1r">
        <div class="grid-row-1 grid-col-1 ring-1 p-1r br-rad-6px">item1</div>
@@ -1361,7 +1361,7 @@
      </div>
     </div>
     <p>A shorter way.</p>
-    <div class="item">
+    <div class="item user-select-none">
      <div class="bg-white p-1r">
       <div class="grid grid-col-auto-auto bg-white gap-1r ring-1 p-1r">
        <div class="ring-1 p-1r br-rad-6px">item1</div>
@@ -1372,7 +1372,7 @@
      </div>
     </div>
     <h3>3 Coulmn grid</h3>
-    <div class="item">
+    <div class="item user-select-none">
      <div class="bg-white p-1r">
       <div class="grid grid-col-auto-auto-auto bg-white gap-1r ring-1 p-1r">
        <div class="ring-1 p-1r br-rad-6px">item1</div>
@@ -1385,7 +1385,7 @@
      </div>
     </div>
     <h3>Horizontal Column Span</h3>
-    <div class="item">
+    <div class="item user-select-none">
      <div class="bg-white p-1r">
       <div class="grid grid-col-auto-auto-auto bg-white gap-1r ring-1 p-1r">
        <div class="ring-1 p-1r br-rad-6px">item1</div>
@@ -1397,7 +1397,7 @@
      </div>
     </div>
     <h3>Vertical Row Span</h3>
-    <div class="item">
+    <div class="item user-select-none">
      <div class="bg-white p-1r">
       <div class="grid grid-col-auto-auto-auto bg-white gap-1r ring-1 p-1r">
        <div class="ring-1 p-1r br-rad-6px grid-row-span-2">item1</div>
@@ -1411,9 +1411,9 @@
     </div>
     <h3>Centering inside a grid item</h3>
     <p>Justify and align inside a item, with <u><b>flex in grid method</b></u> or as I like to refer to it 🙂. Either
-     you can next a div inside a grid item or just add class 'flex-jc-ac' on exsisting grid item. Nesting for now with
-     current library reccommeded.</p>
-    <div class="item">
+     you can nest a div inside a grid item or just add class 'flex-jc-ac' on exsisting grid item to reduce the code size. Nesting for now with
+     current library is reccommeded.</p>
+    <div class="item user-select-none">
      <div class="bg-white p-1r">
       <div class="grid grid-col-auto-auto-auto bg-white gap-1r ring-1 p-1r">
        <div class="ring-1 p-1r br-rad-6px grid-col-span-2">
@@ -1430,7 +1430,7 @@
     </div>
     <h3>Justify self Start, Center and End.</h3>
     <p>You will need to span column for item as well to apply the rule. </p>
-    <div class="item-flex-jc-ac-row">
+    <div class="item-flex-jc-ac-row user-select-none">
      <div class="bg-white p-1r">
       <h4 class="m-t-0 text-center">Justify Self Start</h4>
       <div class="grid bg-white gap-1r ring-1 p-1r">
@@ -1465,7 +1465,7 @@
     <!--  -->
     <h3>Align self Start, Center and End.</h3>
     <p>You will need to span row for item as well to apply the rule. </p>
-    <div class="item-flex-jc-ac-row">
+    <div class="item-flex-jc-ac-row user-select-none">
      <div class="bg-white p-1r">
       <h4 class="m-t-0 text-center">Align self Start</h4>
       <div class="grid bg-white gap-1r ring-1 p-1r">
