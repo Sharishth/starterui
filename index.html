@@ -820,7 +820,7 @@
     <div class="item-flex-jc-ac-row">
      <pre class="code"><code>myfunction = (a,b) => {
   console.log(`${a} and ${b}`);
-}</code></pre>
+  }</code></pre>
     </div>
    </div>
   </div>
@@ -1072,7 +1072,7 @@
    <div class="showitem">
     <h3>Default</h3>
     <div class="item">
-     <div class="card flex-jc-ac-row bg-white p-2 br-rad-6px">
+     <div class="card flex-jc-ac-row gap-05r bg-white p-2 br-rad-6px">
       <div class="radio-wrapper"">
                 <label class=" radio ease-in-out-scale" onclick="resp()">
        <input type="radio" name="myradio">
@@ -1087,7 +1087,7 @@
     </div>
     <h3>Colored Styled</h3>
     <div class="item">
-     <div class="card flex-jc-ac-row bg-white p-2 br-rad-6px">
+     <div class="card flex-jc-ac-row gap-05r bg-white p-2 br-rad-6px">
       <div class="radio-wrapper"">
               <label class=" radio ease-in-out-scale" onclick="resp()">
        <input type="radio" name="myradio2">
@@ -1169,7 +1169,7 @@
     <h3>Vertical Divider</h3>
     <p>Requires script for auto scaling.</p>
     <div class="item">
-     <div class="bg-white p-2 br-rad-6px flex-jc-ac-row">
+     <div class="bg-white p-2 br-rad-6px flex-jc-ac-row gap-05r">
       <h1 class="text-center"> Inspire <br> Yourself </h1>
       <div class="divider-vr">
        <div></div>
@@ -1249,20 +1249,287 @@
         voluptatum a, nulla fugiat ipsa numquam, iste tenetur veniam. Iure illum nihil neque nobis recusandae iste? </p>
        <img src="assets/2.jpg" alt="" width="200px">
       </div>
-
      </div>
     </div>
    </div>
-
   </div>
   <!-- Drawer Showcase-->
-  <!-- TODO : Create Hero section with variants -->
-  <!-- TODO : Create Footer templates with variants -->
-  <!-- TODO : Create Flex templates -->
-  <!-- TODO : Create Grid templates -->
-  <!-- TODO : Create Carousel with Radio variant or indicator-->
-  <!-- TODO : Experimental Typography rules -->
+  <!-- Flex template showcase -->
+  <div class="category m-t-2">
+   <h2>Flex templates</h2>
+   <p>Flex templates includes basic flex arrangemets and responsive hero section. <br> Gap between items in your
+    container will be determined with <u>'.gap-0'</u>, <u>'.gap-05r'</u>, <u>'.gap-1r'</u> class. </p>
+   <div class="showitem">
+    <h3>Flex - Justify Center Align Center row</h3>
+    <p>Sets items insides container to center of parent both verticaly and horizontaly and item direction is row.
+     <br> <u><i>Note: Wrap is enabled for responsiveness depends on screen width less than equal to
+       <b>768px</b>.</i></u>
+    </p>
+    <div class="item user-select-none">
+     <div class="card-text">
+      <div class="flex-jc-ac-row gap-1r ring-1 p-1r">
+       <p class="ring-1 m-0 p-1r br-rad-6px">Item1</p>
+       <p class="ring-1 m-0 p-1r br-rad-6px">Item2</p>
+       <p class="ring-1 m-0 p-1r br-rad-6px">Item3</p>
+      </div>
+     </div>
+    </div>
+    <h3>Flex - Justify Center Align Center Column</h3>
+    <p>Sets items inside container to center of parent both verticaly and horizontaly and item direction is column.
+    </p>
+    <div class="item user-select-none">
+     <div class="card-text">
+      <div class="flex-jc-ac-col gap-1r ring-1 p-1r">
+       <p class="ring-1 m-0 p-1r br-rad-6px">Item1</p>
+       <p class="ring-1 m-0 p-1r br-rad-6px">Item2</p>
+       <p class="ring-1 m-0 p-1r br-rad-6px">Item3</p>
+      </div>
+     </div>
+    </div>
+    <h3 id="mockhero">Hero Section Simple</h3>
+    <div class="item">
+     <div style="max-width: 768px !important;">
+      <div class="flex-jc-ac-col layout-bg-img text-white br-rad-6px h-max-con w-max-con ">
+       <div class="backdrop-darken p-1r br-rad-inherit">
+        <h1 class="text-center">Your Journey begins here.</h1>
+        <p class="text-center m-t-0">Explore everything with us. <br> Get the best of best and <br> exceed your
+         possiblities.</p>
+        <div class="flex-jc-ac-row gap-1r">
+         <a href="#mockhero" class="button bg-glass-scheme link-button">Learn More</a>
+         <a href="#mockhero" class="button bg-glass-scheme link-button">Contant Us</a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <h3 id="mockhero2">Hero Section two row</h3>
+    <div class="item">
+     <div class="flex-jc-ac-colring-1 h-100">
+      <!-- Column 1 -->
+      <div class="p-1r flex-jc-ac-col bg-black text-white w-100" style="height: 200px;">
+       <h1 class="text-center">Your Journey begins here.</h1>
+       <a href="#mockhero2" class="button bg-white link-button text-black">Learn More</a>
+      </div>
+      <!-- Column 2 -->
+      <div class="p-1r flex-jc-ac-col bg-white text-black w-100" style="height: 200px;">
+       <p class="text-center">Explore everything with us. Get the best of best and <br> exceed your possiblities.</p>
+       <a href="#mockhero2" class="button bg-black link-button ">Contant Us</a>
+      </div>
+     </div>
+    </div>
+    <h3 id="mockhero2">Hero Section two col</h3>
+    <p>Wraps into two row layout at smaller screen width.</p>
+    <div class="item">
+     <div class="flex-jc-ac-row h-100">
+      <!-- Column 1 -->
+      <div class="p-1r flex-jc-ac-col align-self-stretch bg-black text-white w-100">
+       <h1 class="text-center m-t-a">Your Journey begins here.</h1>
+       <h1 class="text-center m-t-a">Do not wait.</h1>
+       <a href="#mockhero2" class="button bg-white link-button text-black m-t-a m-b-0">Learn More</a>
+      </div>
+      <!-- Column 2 -->
+      <div class="p-1r flex-jc-ac-col align-self-stretch bg-white text-black w-100">
+       <p class="text-center m-t-a">Explore everything with us. Get the best of best and exceed your possiblities.</p>
+       <a href="#mockhero2" class="button bg-black link-button m-t-a m-b-0">Contant Us</a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Flex template showcase end -->
+  <!-- Grid template showcase start -->
+  <div class="category m-t-2">
+   <h2>Grid templates</h2>
+   <p>Grid template includes limited but neccessary single attribute classes to help you design simple grid layout like
+    footer or rows with custom layouts. Gap rules are same as flex. <br><br> &ThickSpace; "grid-col-span-x" is a single
+    attribute class to help you span your grid item for a column where "x" should be from 1 to 4. <br><br> &ThickSpace;
+    "grid-col-x" and "grid-row-x" is for item's placement in grid layout where "x" should be from 1 to 4. <br><br>
+    &ThickSpace; "justify-self-pos" and "align-self-pos" is for items where "pos" should be "start", "end" or "center".
+    <br><br> While you can utilize these to create the most essential layouts, you can also utilize the template classes
+    provided by the CSS.
+   </p>
+   <div class="showitem">
+    <h3>2 column grid</h3>
+    <div class="item">
+     <div class="bg-white p-1r">
+      <div class="grid bg-white gap-1r ring-1 p-1r">
+       <div class="grid-row-1 grid-col-1 ring-1 p-1r br-rad-6px">item1</div>
+       <div class="grid-row-1 grid-col-2 ring-1 p-1r br-rad-6px">item2</div>
+       <div class="grid-row-2 grid-col-1 ring-1 p-1r br-rad-6px">item3</div>
+       <div class="grid-row-2 grid-col-2 ring-1 p-1r br-rad-6px">item4</div>
+      </div>
+     </div>
+    </div>
+    <p>A shorter way.</p>
+    <div class="item">
+     <div class="bg-white p-1r">
+      <div class="grid grid-col-auto-auto bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px">item1</div>
+       <div class="ring-1 p-1r br-rad-6px">item2</div>
+       <div class="ring-1 p-1r br-rad-6px">item3</div>
+       <div class="ring-1 p-1r br-rad-6px">item4</div>
+      </div>
+     </div>
+    </div>
+    <h3>3 Coulmn grid</h3>
+    <div class="item">
+     <div class="bg-white p-1r">
+      <div class="grid grid-col-auto-auto-auto bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px">item1</div>
+       <div class="ring-1 p-1r br-rad-6px">item2</div>
+       <div class="ring-1 p-1r br-rad-6px">item3</div>
+       <div class="ring-1 p-1r br-rad-6px">item4</div>
+       <div class="ring-1 p-1r br-rad-6px">item5</div>
+       <div class="ring-1 p-1r br-rad-6px">item6</div>
+      </div>
+     </div>
+    </div>
+    <h3>Horizontal Column Span</h3>
+    <div class="item">
+     <div class="bg-white p-1r">
+      <div class="grid grid-col-auto-auto-auto bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px">item1</div>
+       <div class="ring-1 p-1r br-rad-6px">item2</div>
+       <div class="ring-1 p-1r br-rad-6px">item3</div>
+       <div class="ring-1 p-1r br-rad-6px">item4</div>
+       <div class="grid-col-span-2 ring-1 p-1r br-rad-6px">item5</div>
+      </div>
+     </div>
+    </div>
+    <h3>Vertical Row Span</h3>
+    <div class="item">
+     <div class="bg-white p-1r">
+      <div class="grid grid-col-auto-auto-auto bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px grid-row-span-2">item1</div>
+       <div class="ring-1 p-1r br-rad-6px">item2</div>
+       <div class="ring-1 p-1r br-rad-6px">item3</div>
+       <!-- <div class="ring-1 p-1r br-rad-6px">item4</div> -->
+       <div class="ring-1 p-1r br-rad-6px">item5</div>
+       <div class="ring-1 p-1r br-rad-6px">item6</div>
+      </div>
+     </div>
+    </div>
+    <h3>Centering inside a grid item</h3>
+    <p>Justify and align inside a item, with <u><b>flex in grid method</b></u> or as I like to refer to it 🙂. Either
+     you can next a div inside a grid item or just add class 'flex-jc-ac' on exsisting grid item. Nesting for now with
+     current library reccommeded.</p>
+    <div class="item">
+     <div class="bg-white p-1r">
+      <div class="grid grid-col-auto-auto-auto bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px grid-col-span-2">
+        <div class="flex-jc-ac">item1</div>
+       </div>
+       <div class="ring-1 p-1r br-rad-6px">item2</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-span-2 flex-jc-ac">item3</div>
+       <div class="grid-col-span-2 ring-1 p-1r br-rad-6px flex-jc-ac">item4</div>
+       <!-- <div class="ring-1 p-1r br-rad-6px">item5</div> -->
+       <div class="ring-1 p-1r br-rad-6px">item5</div>
+       <div class="ring-1 p-1r br-rad-6px">item6</div>
+      </div>
+     </div>
+    </div>
+    <h3>Justify self Start, Center and End.</h3>
+    <p>You will need to span column for item as well to apply the rule. </p>
+    <div class="item-flex-jc-ac-row">
+     <div class="bg-white p-1r">
+      <h4 class="m-t-0 text-center">Justify Self Start</h4>
+      <div class="grid bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-1">item1</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-2 grid-col-span-2 justify-self-start">item2</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-1">item3</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-2">item4</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-3">item5</div>
+      </div>
+     </div>
+     <div class="bg-white p-1r">
+      <h4 class="m-t-0 text-center">Justify Self Center</h4>
+      <div class="grid bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-1">item1</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-2 grid-col-span-2 justify-self-center">item2</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-1">item3</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-2">item4</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-3">item5</div>
+      </div>
+     </div>
+     <div class="bg-white p-1r">
+      <h4 class="m-t-0 text-center">Justify Self End</h4>
+      <div class="grid bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-1">item1</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-2 grid-col-span-2 justify-self-end">item2</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-1">item3</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-2">item4</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-3">item5</div>
+      </div>
+     </div>
+    </div>
+    <!--  -->
+    <h3>Align self Start, Center and End.</h3>
+    <p>You will need to span row for item as well to apply the rule. </p>
+    <div class="item-flex-jc-ac-row">
+     <div class="bg-white p-1r">
+      <h4 class="m-t-0 text-center">Align self Start</h4>
+      <div class="grid bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-1 grid-row-span-2 align-self-start">item1</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-2">item2</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-3">item3</div>
+       <!-- <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-1">item4</div> -->
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-2">item5</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-3">item6</div>
+      </div>
+     </div>
+     <div class="bg-white p-1r">
+      <h4 class="m-t-0 text-center">Align self Center</h4>
+      <div class="grid bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-1 grid-row-span-2 align-self-center">item1</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-2">item2</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-3">item3</div>
+       <!-- <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-1">item4</div> -->
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-2">item5</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-3">item6</div>
+      </div>
+     </div>
+     <div class="bg-white p-1r">
+      <h4 class="m-t-0 text-center">Align self End</h4>
+      <div class="grid bg-white gap-1r ring-1 p-1r">
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-1 grid-row-span-2 align-self-end">item1</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-2">item2</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-1 grid-col-3">item3</div>
+       <!-- <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-1">item4</div> -->
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-2">item5</div>
+       <div class="ring-1 p-1r br-rad-6px grid-row-2 grid-col-3">item6</div>
+      </div>
+     </div>
+    </div>
+    <h3 id="mockfooter">Footer template Simple</h3>
+    <div class="item">
+     <div class="w-100 bg-info-color p-1r text-white">
+      <div class="grid grid-col-auto-auto p-1r gap-1r">
+       <div class="grid-row-1 grid-col-1 grid-col-span-1 justify-self-start"><img class="br-rad-50" src="assets/1.jpg"
+         alt="footer-logo" height="128px" width="128px"></div>
+       <div class="grid-row-1 grid-col-2 flex-jc-ac-col m-l-a m-r-0">
+        <a class="text-white" href="#mockfooter">Link Here</a>
+        <a class="m-t-2 text-white" href="#mockfooter">Link Here</a>
+        <a class="m-t-2 text-white" href="#mockfooter">Link Here</a>
+        <a class="m-t-2 text-white" href="#mockfooter">Link Here</a>
+        <a class="m-t-2 text-white" href="#mockfooter">Link Here</a>
+       </div>
+       <div class="grid-row-1 grid-col-3 flex-jc-ac-col m-l-a m-r-0">
+        <a class="text-white" href="#mockfooter">Link Here</a>
+        <a class="m-t-2 text-white" href="#mockfooter">Link Here</a>
+        <a class="m-t-2 text-white" href="#mockfooter">Link Here</a>
+        <a class="m-t-2 text-white" href="#mockfooter">Link Here</a>
+        <a class="m-t-2 text-white" href="#mockfooter">Link Here</a>
+       </div>
+       <div class="grid-row-2 grid-col-1 grid-col-span-3 text-center">&copy; Example Release, 2024</div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Grid template showcase end -->
  </div>
+ <!-- TODO : Experimental Typography rules -->
+ <!-- TODO : Footer vairiants -->
  <script src="script.js"></script>
 </body>
 
