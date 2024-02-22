@@ -7,10 +7,7 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 ![Chrome Lighthouse score](lighthousescore.png)
 
 #### Next target 
-  1. Footer page (landing template)
-  2. Flex templates
-  3. Grid templates
-  4. Hero
+  1. Experimental Typography Rules
 
 ## Components Till now (20-02-2024)
 ### Action
@@ -95,3 +92,20 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 
 ### Drawer
   1. Default
+
+### Flex templates
+  1. Flex - Justify Center Align Center row
+  2. Flex - Justify Center Align Center Column
+  3. Hero Section Simple
+  4. Hero Section two row
+  5. Hero Section two col
+
+### Grid templates
+  1. 2 column grid
+  2. 3 Coulmn grid
+  3. Horizontal Column Span
+  4. Vertical Row Span
+  5. Centering inside a grid item
+  6. Justify self Start, Center and End
+  7. Align self Start, Center and End
+  8. Footer template Simple
