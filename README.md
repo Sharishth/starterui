@@ -1,6 +1,6 @@
 # StarterUI
 Straightforward UI component library and styling rule set using HTML, CSS, and JavaScript. The components are designed for reusability, and the script is imported only once, eliminating the need to create separate duplicate functions for reused components. However, for components that don't require a script, developers can use them without importing.
-[Preview Components](https://sharishth.github.io/startercss/) 
+[Preview Components](https://sharishth.github.io/starterui/) 
 
 Note: _layout.css should be ignored and is only there for formatting documentation of showcase._
 
