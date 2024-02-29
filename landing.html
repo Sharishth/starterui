@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description"
+  content="An introduction to StarterUI. A simple yet sufficient UI library for your website and webapp.">
+ <title>StarterUI</title>
+ <link rel="stylesheet" href="style.css">
+ <script src="https://kit.fontawesome.com/450fb7a7c9.js" crossorigin="anonymous"></script>
+ <script src="script.js" defer></script>
+ <style>
+  :root {
+   --Text: #c0caf5;
+   --Subtext1: #bac2de;
+   --Subtext0: #a6adc8;
+   --Overlay2: #9399b2;
+   --Overlay1: #7f849c;
+   --Surface1: #45475a;
+   --Surface0: #313244;
+   --Base: #1e1e2e;
+  }
+ </style>
+ <link rel="stylesheet" href="./assets/graphs.css">
+</head>
+
+<body class="m-0 font-family-system-segoe bg-black smooth-scroll thin-scrollbar">
+
+ <header class="navbar sticky-top z-index-0" style="background-color: var(--Surface0);">
+  <div id="mymodal" class="shadow-default p-1r flex-jc-ac"
+   style="background-color: var(--Surface1); color: var(--Text); justify-content: space-between !important; display: none;">
+   <p class="font-size-1-5-r text-center m-0">Coming Soon...</p>
+   <button class="button bg-glass-scheme shadow-default" onclick="closeModalHere()">x</button>
+  </div>
+  <script>
+   const mymodal = document.getElementById('mymodal');
+   function closeModalHere() {
+    mymodal.style.display = "none"
+   }
+
+   function showModalHere() {
+    mymodal.style.display = "flex"
+   }
+  </script>
+  <nav class="navWrapper">
+   <ul class="navList">
+    <li class="navItems"><a class="text-white" href="https://sharishth.github.io/starterui/">
+      <i class="fa-solid fa-house" style="color: var(--success-color);"></i> Home
+     </a></li>
+    <li class="navItems" style="cursor: pointer;">
+     <span class="text-white" onclick="showModalHere()"><i class="fa-solid fa-book"
+       style="color: var(--info-color);"></i> Docs</span>
+    </li>
+    <li class="navItems"><a class="text-white" href="https://github.com/Sharishth/starterui">
+      <i class="fa-brands fa-github" style="color: var();"></i> Github
+     </a></li>
+   </ul>
+  </nav>
+ </header>
+
+ <main class="text-white z-index-0">
+
+  <section class="flex-jc-ac-row" style="height: 100svh;">
+   <div class="w-100 p-1r br-rad-inherit flex-jc-ac-col h-100"
+    style="background: radial-gradient(black,var(--Base) 70%); box-sizing: border-box;">
+    <h1 class="text-center font-size-4-r m-t-0 m-b-0">StarterUI</h1>
+    <p class="text-center font-size-1-5-r">A UI library designed to meet your essential needs.</p>
+    <div class="flex-jc-ac-row gap-4r m-t-3 m-b-3">
+     <a href="https://github.com/Sharishth/starterui/blob/main/README.md"
+      class="button link-button bg-success-color text-black">Get Started</a>
+     <a href="https://sharishth.github.io/starterui/" class="button link-button bg-info-color text-black">Components</a>
+    </div>
+    <p class="m-b-0">CSS: </p>
+    <div class="linkbox thin-scrollbar bg-transparent-black-scheme text-center p-1r m-t-2">
+     <p class="m-0" style="text-wrap: nowrap;">&lt;<span style="color: var(--error-color);">link</span> <span
+       style="color: var(--warn-color);">rel</span>=<span style="color: var(--success-color);">"stylesheet"</span> <span
+       style="color: var(--warn-color);">type</span>=<span style="color: var(--success-color);">"text/css"</span> <span
+       style="color: var(--warn-color);">href</span>=<span
+       style="color: var(--success-color);">"https://raw.githubusercontent.com/Sharishth/starterui/main/style.css"</span>&gt;
+     </p>
+    </div>
+    <p class="m-b-0 ">JavaScript: </p>
+    <div class="linkbox thin-scrollbar bg-transparent-black-scheme text-center p-1r m-t-2">
+     <p class="m-0" style="text-wrap: nowrap;">&lt;<span style="color: var(--error-color);">script</span> <span
+       style="color: var(--warn-color);">src</span>=<span
+       style="color: var(--success-color);">"https://raw.githubusercontent.com/Sharishth/starterui/main/script.js"</span>
+      <span style="color: var(--warn-color);">defer</span>&gt;&lt;/<span
+       style="color: var(--error-color);">script</span>&gt;</p>
+    </div>
+   </div>
+  </section>
+
+  <section class="flex-jc-ac-row h-100">
+   <!-- Column 1 -->
+   <div class="flex-jc-ac-col align-self-stretch text-white w-100" style="background-color: var(--Base);">
+    <h1 class="text-center m-0 font-size-2-r p-2r">Why Choose StarterUI?</h1>
+   </div>
+   <!-- Column 2 -->
+   <div class="flex-jc-ac-col align-self-stretch text-white w-100 p-2r" style="background-color: var(--Surface0);">
+    <p class="text-center m-0 w-100"> We understand the importance of a solid foundation for your projects. While we may
+     not claim to be the ultimate solution, StarterUI offers a friendly starting point for developers of all levels. Say
+     goodbye to repetitive code and hello to a more efficient development process with StarterUI.
+    </p>
+   </div>
+  </section>
+
+  <section class="flex-jc-ac-row">
+   <div class="w-100 p-1r br-rad-inherit p-y-10" style="background: radial-gradient(black,var(--Base) 70%);">
+    <h1 class="text-center font-size-2-r m-b-0">Performance You Can Trust</h1>
+    <p class="text-center">StarterUI is committed to delivering reliable performance across various metrics. Our Chrome
+     Lighthouse scores, ranging from 83 to 96, reflect our dedication to providing a stable foundation for your
+     projects. Trust StarterUI to power your applications with performance you can count on.
+    </p>
+    <div class="flex-jc-ac-row gap-4r">
+     <div class="flex-jc-ac-col">
+      <div class="value1 donut-graph text-center"></div>
+      <p class="m-b-0">Performance</p>
+     </div>
+     <div class="flex-jc-ac-col">
+      <div class="value2 donut-graph text-center"></div>
+      <p class="m-b-0">Accessibility</p>
+     </div>
+     <div class="flex-jc-ac-col">
+      <div class="value3 donut-graph text-center"></div>
+      <p class="m-b-0">Best Practices</p>
+     </div>
+     <div class="flex-jc-ac-col">
+      <div class="value4 donut-graph text-center"></div>
+      <p class="m-b-0">SEO</p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Here -->
+  <section class="flex-jc-ac-col">
+   <div class="flex-jc-ac-row" style="background: radial-gradient(black,var(--Base) 70%);">
+    <div class=" flex-jc-ac w-100" style="background-color: var(--Surface0);">
+     <img src="./assets/carbon.svg" alt="html code" class="m-0" style=" max-width: 100%; ">
+    </div>
+    <div>
+     <h1 class="font-size-2-r text-center p-1r">Explore Our Beginner-Friendly Components</h1>
+    </div>
+   </div>
+   <div class="p-1r" style="background: radial-gradient(black,var(--Base) 70%);">
+    <p class="m-0 text-center p-y-5">
+     Dive into the world of web development with StarterUI's range of beginner-friendly components. From buttons and
+     dropdowns to cards and carousels, StarterUI offers everything you need to kickstart your projects. Explore our
+     library and unleash your creativity with ease.
+    </p>
+   </div>
+  </section>
+
+  <section class="flex-jc-ac-row flex-wrap gap-1r p-1r" style="background: radial-gradient(black,var(--Base) 70%);">
+   <div class="card-text shadow-default text-black" id="mock-card">
+    <h1>Earth 🌍</h1>
+    <p>Earth is the third planet from the<br> Sun and the only astronomical<br> object known to harbor life.
+     This<br> is enabled by Earth being a water<br> world, the only one in the Solar<br> System sustaining
+     liquid surface<br> water which life depends on. </p>
+    <a href="#mock-card" class="button link-button bg-trust-blue place-self-center text-white">Learn More</a>
+   </div>
+   <div class="tabs">
+    <div class="tabBar" onclick="showTab(event)">
+     <button class="tab tabActive">Tab 1</button>
+     <button class="tab">Tab 2</button>
+     <button class="tab">Tab 3</button>
+    </div>
+    <div class="tabBody">
+     <div class="tabContent">
+      <img src="assets/1.jpg" alt="" height="270px">
+     </div>
+     <div class="tabContent">
+      <img src="assets/2.jpg" alt="" height="270px">
+     </div>
+     <div class="tabContent">
+      <img src="assets/3.jpg" alt="" height="270px">
+     </div>
+    </div>
+   </div>
+   <table cellspacing=0 class="shadow-default">
+    <thead>
+     <tr>
+      <th>Col Head 1</th>
+      <th>Col Head 2</th>
+      <th>Col Head 3</th>
+      <th>Col Head 4</th>
+     </tr>
+    </thead>
+    <tbody class="text-black">
+     <tr>
+      <td>Row Value 1</td>
+      <td>Row Value 2</td>
+      <td>Row Value 3</td>
+      <td>Row Value 4</td>
+     </tr>
+     <tr>
+      <td>Row Value 5</td>
+      <td>Row Value 6</td>
+      <td>Row Value 7</td>
+      <td>Row Value 8</td>
+     </tr>
+     <tr>
+      <td>Row Value 9</td>
+      <td>Row Value 10</td>
+      <td>Row Value 11</td>
+      <td>Row Value 12</td>
+     </tr>
+     <tr>
+      <td>Row Value 13</td>
+      <td>Row Value 14</td>
+      <td>Row Value 15</td>
+      <td>Row Value 16</td>
+     </tr>
+     <tr>
+      <td>Row Value 17</td>
+      <td>Row Value 18</td>
+      <td>Row Value 19</td>
+      <td>Row Value 20</td>
+     </tr>
+    </tbody>
+   </table>
+   </div>
+   <div class="bg-white p-1r br-rad-6px text-black user-select-none">
+    <div class="grid grid-col-auto-auto-auto bg-white gap-1r ring-1 p-1r">
+     <div class="ring-1 p-1r br-rad-6px grid-col-span-2">
+      <div class="flex-jc-ac">item1</div>
+     </div>
+     <div class="ring-1 p-1r br-rad-6px">item2</div>
+     <div class="ring-1 p-1r br-rad-6px grid-row-span-2 flex-jc-ac">item3</div>
+     <div class="grid-col-span-2 ring-1 p-1r br-rad-6px flex-jc-ac">item4</div>
+     <!-- <div class="ring-1 p-1r br-rad-6px">item5</div> -->
+     <div class="ring-1 p-1r br-rad-6px">item5</div>
+     <div class="ring-1 p-1r br-rad-6px">item6</div>
+    </div>
+   </div>
+  </section>
+
+  <section class="flex-jc-ac-col flex-wrap p-1r text-center">
+   <h1 class="font-size-2-r">Start Your Journey with StarterUI</h1>
+   <p>Embark on a journey of innovation and creativity with StarterUI as your guide. Whether you're building your first
+    website or refining your skills, StarterUI provides a welcoming environment for growth and exploration. Start your
+    journey with StarterUI today and unlock the full potential of your projects. </p>
+   <p></p>
+  </section>
+ </main>
+
+ <footer class="grid grid-col-auto-auto p-1r gap-1r z-index-0" style="background-color: var(--Surface1);">
+  <div class="grid-row-1 grid-col-1 grid-col-span-1 justify-self-start h-100 flex-jc-ac-col">
+   <!-- <img class="br-rad-50" src="assets/1.jpg"
+    alt="footer-logo" height="128px" width="128px"> -->
+   <h1 class="text-white">StarterUI</h1>
+  </div>
+  <div class="grid-row-1 grid-col-3 flex-jc-ac-col m-l-a m-r-1r">
+   <a class="w-100 p-05-r text-white" href="https://www.linkedin.com/in/sharishth-singh/" target="_blank">About Me</a>
+   <a class="w-100 p-05-r m-t-2 text-white" href="https://cv.sharishth.com" target="_blank">My Website</a>
+   <a class="w-100 p-05-r m-t-2 text-white" href="https://www.linkedin.com/in/sharishth-singh/"
+    target="_blank">Contact</a>
+  </div>
+  <div class="grid-row-2 grid-col-1 grid-col-span-3 text-center text-white">&copy; Sharishth Singh, 2024</div>
+ </footer>
+
+</body>
+
+</html>
