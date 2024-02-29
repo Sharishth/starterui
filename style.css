@@ -1,8 +1,13 @@
 :root {
- --info-color: rgb(0, 162, 255);
+ --info-color: rgb(57, 168, 233);
+ --info-color-darker: rgb(43, 134, 187);
  --warn-color: gold;
  --error-color: lightcoral;
  --success-color: lightgreen;
+ --success-color-darker: rgb(111, 180, 111);
+ --trust-blue: rgb(57, 55, 187);
+ --trust-blue-darker: rgb(79, 116, 184);
+ --standard-gray: gray;
 }
 
 .user-select-none {
@@ -10,6 +15,33 @@
  -ms-user-select: none;
  user-select: none;
 }
+
+/* scroll behaviour */
+.smooth-scroll {
+ scroll-behavior: smooth;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+ height: 8px;
+ width: 8px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+ background: #f1f1f131;
+ border-radius: 6px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+ background: #cccccc36;
+ border-radius: 6px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+ background: #bbb;
+}
+
+/* scroll behaviour */
+
 
 /* Background Rules */
 .backdrop-darken {
@@ -39,6 +71,10 @@
  background-color: var(--info-color);
 }
 
+.bg-info-color-darker {
+ background-color: var(--info-color-darker);
+}
+
 .bg-warn-color {
  background-color: var(--warn-color);
 }
@@ -49,6 +85,18 @@
 
 .bg-success-color {
  background-color: var(--success-color);
+}
+
+.bg-success-color-darker {
+ background-color: var(--success-color-darker);
+}
+
+.bg-trust-blue {
+ background-color: var(--trust-blue);
+}
+
+.bg-standard-gray {
+ background-color: var(--standard-gray);
 }
 
 .bg-white {
@@ -73,16 +121,91 @@
 
 /* Color and Background Color Rules */
 
+/* font rules */
 .font-family-system-segoe {
  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+.font-size-1-r {
+ font-size: 1rem;
+}
+
+.font-size-1-25-r {
+ font-size: 1.25rem;
+}
+
+.font-size-1-5-r {
+ font-size: 1.5rem;
+}
+
+.font-size-1-75-r {
+ font-size: 1.75rem;
+}
+
+.font-size-2-r {
+ font-size: 2rem;
+}
+
+.font-size-2-25-r {
+ font-size: 2.25rem;
+}
+
+.font-size-2-5-r {
+ font-size: 2.5rem;
+}
+
+.font-size-2-75-r {
+ font-size: 2.75rem;
+}
+
+.font-size-3-r {
+ font-size: 3rem;
+}
+
+.font-size-3-25-r {
+ font-size: 3.25rem;
+}
+
+.font-size-3-5-r {
+ font-size: 3.5rem;
+}
+
+.font-size-3-75-r {
+ font-size: 3.75rem;
+}
+
+.font-size-4-r {
+ font-size: 4rem;
+}
+
+.font-size-4-25-r {
+ font-size: 4.25rem;
+}
+
+.font-size-4-5-r {
+ font-size: 4.5rem;
+}
+
+.font-size-4-75-r {
+ font-size: 4.75rem;
+}
+
+.font-size-5-r {
+ font-size: 5rem;
+}
+
+/* font rules */
 
 *:focus {
  outline: none;
 }
 
 /* Dimension Rules */
+.w-100 {
+ width: 50%;
+}
+
 .w-100 {
  width: 100%;
 }
@@ -170,6 +293,11 @@
  top: 0;
 }
 
+.fixed-bottom {
+ position: fixed;
+ bottom: 0;
+}
+
 /* Position rules */
 
 /* Flex Rules */
@@ -195,7 +323,7 @@
  /* gap: 1rem; */
 }
 
-.f-wrap {
+.flex-wrap {
  flex-wrap: wrap;
 }
 
@@ -213,6 +341,18 @@
 
 .gap-1r {
  gap: 1rem;
+}
+
+.gap-2r {
+ gap: 2rem;
+}
+
+.gap-3r {
+ gap: 3rem;
+}
+
+.gap-4r {
+ gap: 4rem;
 }
 
 /* Flex Rules */
@@ -378,6 +518,14 @@
  margin-right: 0;
 }
 
+.m-r-1r {
+ margin-right: 1rem;
+}
+
+.m-r-2r {
+ margin-right: 2rem;
+}
+
 .m-r-a {
  margin-right: auto;
 }
@@ -440,6 +588,65 @@
  padding-right: 5% !important;
 }
 
+.p-y-1 {
+ padding-top: 1% !important;
+ padding-bottom: 1% !important;
+}
+
+.p-y-2 {
+ padding-top: 2% !important;
+ padding-bottom: 2% !important;
+}
+
+.p-y-3 {
+ padding-top: 3% !important;
+ padding-bottom: 3% !important;
+}
+
+.p-y-4 {
+ padding-top: 4% !important;
+ padding-bottom: 4% !important;
+}
+
+.p-y-5 {
+ padding-top: 5% !important;
+ padding-bottom: 5% !important;
+}
+
+.p-y-5 {
+ padding-top: 5% !important;
+ padding-bottom: 5% !important;
+}
+
+.p-y-6 {
+ padding-top: 6% !important;
+ padding-bottom: 6% !important;
+}
+
+.p-y-7 {
+ padding-top: 7% !important;
+ padding-bottom: 7% !important;
+}
+
+.p-y-8 {
+ padding-top: 8% !important;
+ padding-bottom: 8% !important;
+}
+
+.p-y-9 {
+ padding-top: 9% !important;
+ padding-bottom: 9% !important;
+}
+
+.p-y-10 {
+ padding-top: 10% !important;
+ padding-bottom: 10% !important;
+}
+
+.p-05-r {
+ padding: 0.5rem;
+}
+
 .p-1r {
  padding: 1rem;
 }
@@ -459,6 +666,14 @@
  text-align: center;
 }
 
+.text-left {
+ text-align: left;
+}
+
+.text-right {
+ text-align: right;
+}
+
 /* text rules */
 
 /* background color rules */
@@ -468,8 +683,6 @@
 }
 
 .link-button {
- background-color: rgb(57, 55, 187);
- color: white;
  text-wrap: nowrap;
  text-decoration: none;
  font-weight: 500;
@@ -480,11 +693,10 @@
 
 .link-button:visited {
  text-decoration: none;
- color: white;
+ color: initial;
 }
 
 .link-button:hover {
- background-color: rgb(79, 116, 184);
  outline: none;
 }
 
@@ -539,11 +751,10 @@
  transform: scale(0.95);
 }
 
-.bg-glass-scheme {
- background: rgba(255, 255, 255, 0.233) !important;
- color: rgba(255, 255, 255, 0.884);
+.bg-transparent-black-scheme {
+ background: rgba(0, 0, 0, 0.473) !important;
+ color: rgb(255, 255, 255) !important;
  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.185);
- backdrop-filter: blur(2px);
 }
 
 .bg-glass-scheme {
@@ -801,6 +1012,22 @@ tbody>tr:nth-child(n):hover {
  filter: brightness(0.95);
 }
 
+input[type="search"].inputtext {
+ background-image: url('./icons8-search.svg');
+ background-size: 1.5rem;
+ background-repeat: no-repeat;
+ background-position-x: 95%;
+ background-position-y: center;
+}
+
+input[type="search"].inputtext:focus,
+input[type="search"].inputtext:hover {
+ background-image: none;
+ background-size: 2rem;
+ background-repeat: no-repeat;
+ background-position: 95%;
+}
+
 .inputcolor {
  border: none;
  border-radius: 4px;
@@ -1048,15 +1275,16 @@ tbody>tr:nth-child(n):hover {
 }
 
 .crumbs>* {
- color: dodgerblue;
+ color: rgba(0, 73, 153);
 }
 
 .crumbs>*:visited {
- color: dodgerblue;
+ color: rgba(0, 73, 153)
 }
 
 .crumbs:last-of-type>* {
  color: navy;
+ font-weight: 500;
 }
 
 .crumbs>*:hover {
@@ -1081,7 +1309,6 @@ tbody>tr:nth-child(n):hover {
 /* Navbar Rules*/
 .navbar {
  width: 100%;
- background-color: rgb(240, 240, 240);
 }
 
 .navWrapper:not(:has(.navBrand)) {
@@ -1123,9 +1350,13 @@ tbody>tr:nth-child(n):hover {
  color: black;
 }
 
+.navList>.navItems {
+ border-bottom: 4px solid transparent;
+}
+
 .navList>.navItems:hover,
 .hiddenNavList>.navItems:hover {
- background-color: lightgray;
+ border-bottom: 4px solid white;
 }
 
 .NavResponsive>.navWrapper {
@@ -1437,7 +1668,7 @@ input[type='range']::-webkit-slider-thumb {
  margin-right: auto;
  display: flex;
  gap: 1rem;
- color: gray;
+ color: black;
  align-items: center;
 }
 
@@ -1459,7 +1690,7 @@ input[type='range']::-webkit-slider-thumb {
 
 .browser-body {
  padding: 8px;
- color: darkgray;
+ color: black;
 }
 
 .mobile-border {
