@@ -4,7 +4,8 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>s Library</title>
+ <meta name="description" content="A simple yet sufficient UI library for your website and webapp.">
+ <title>StarterUI</title>
  <link rel="stylesheet" href="layout.css">
  <link rel="stylesheet" href="style.css">
 </head>
@@ -126,6 +127,10 @@
      <input type="date" class="inputdate">
      <input type="week" class="inputdate">
      <input type="datetime-local" class="inputdate">
+    </div>
+    <h3>Search Bar</h3>
+    <div class="item">
+     <input type="search" class="inputtext">
     </div>
    </div>
   </div>
@@ -368,7 +373,7 @@
     </div>
    </div>
   </div>
-  <!-- Badge Showcase Start -->
+  <!-- Badge Showcase end -->
   <!-- Card Showcase Start -->
   <div class="category m-t-2">
    <h2>Card</h2>
@@ -381,7 +386,7 @@
       <p>Earth is the third planet from the<br> Sun and the only astronomical<br> object known to harbor life.
        This<br> is enabled by Earth being a water<br> world, the only one in the Solar<br> System sustaining
        liquid surface<br> water which life depends on. </p>
-      <a href="#mock-card" class="link-button place-self-center">Learn More</a>
+      <a href="#mock-card" class="button link-button bg-trust-blue place-self-center text-white">Learn More</a>
      </div>
     </div>
     <h3>Quote text card</h3>
@@ -602,7 +607,7 @@
    <div class="showitem">
     <h3 id="simplenav">Simple Default</h3>
     <div class="item">
-     <header class="navbar">
+     <header class="navbar bg-white">
       <nav class="navWrapper">
        <ul class="navList">
         <li class="navItems"><a href="#simplenav">Home</a></li>
@@ -614,7 +619,7 @@
     </div>
     <h3 id="navresp">Window Size Responsive</h3>
     <div class="item">
-     <header class="navbar NavResponsive">
+     <header class="navbar NavResponsive bg-white">
       <nav class="navWrapper">
        <ul class="navList">
         <li class="navItems"><a href="#navresp">Home</a></li>
@@ -634,7 +639,7 @@
     </div>
     <h3 id="mocknavimg">Responsive Nav with Logo</h3>
     <div class="item">
-     <header class="navbar NavResponsive" id="sticknav">
+     <header class="navbar NavResponsive bg-white" id="sticknav">
       <nav class="navWrapper">
        <div class="navBrand">
         <img src="pexels-felix-mittermeier-956999.jpg" alt="logo" class="navLogo">
@@ -661,7 +666,7 @@
     <h3 id="mocksticktopnav">Sticky Navbar</h3>
     <div class="item">
      <div class="card card-text mock-height-20rem p-0 br-rad-0">
-      <header class="navbar NavResponsive sticky-top">
+      <header class="navbar NavResponsive sticky-top bg-white">
        <nav class="navWrapper">
         <div class="navBrand">
          <img src="pexels-felix-mittermeier-956999.jpg" alt="logo" class="navLogo">
@@ -1289,7 +1294,7 @@
     <h3 id="mockhero">Hero Section Simple</h3>
     <div class="item">
      <div style="max-width: 768px !important;">
-      <div class="flex-jc-ac-col layout-bg-img text-white br-rad-6px h-max-con w-max-con ">
+      <div class=" layout-bg-img text-white br-rad-6px h-max-con w-max-con ">
        <div class="backdrop-darken p-1r br-rad-inherit">
         <h1 class="text-center">Your Journey begins here.</h1>
         <p class="text-center m-t-0">Explore everything with us. <br> Get the best of best and <br> exceed your
@@ -1302,9 +1307,22 @@
       </div>
      </div>
     </div>
+    <p>Compact code version</p>
+    <div class="item">
+     <div class="flex-jc-ac-row w-100">
+      <div class="w-100 backdrop-darken p-1r br-rad-inherit">
+       <h1 class="text-center">StarterUI</h1>
+       <p class="text-center m-t-0">A UI library designed to meet your essential needs.</p>
+       <div class="flex-jc-ac-row gap-1r">
+        <a href="#mockhero" class="button link-button bg-gray">Get Started</a>
+        <a href="#mockhero" class="button link-button bg-gray">Contant Us</a>
+       </div>
+      </div>
+     </div>
+    </div>
     <h3 id="mockhero2">Hero Section two row</h3>
     <div class="item">
-     <div class="flex-jc-ac-colring-1 h-100">
+     <div class="flex-jc-ac-col h-100">
       <!-- Column 1 -->
       <div class="p-1r flex-jc-ac-col bg-black text-white w-100" style="height: 200px;">
        <h1 class="text-center">Your Journey begins here.</h1>
@@ -1411,7 +1429,8 @@
     </div>
     <h3>Centering inside a grid item</h3>
     <p>Justify and align inside a item, with <u><b>flex in grid method</b></u> or as I like to refer to it 🙂. Either
-     you can nest a div inside a grid item or just add class 'flex-jc-ac' on exsisting grid item to reduce the code size. Nesting for now with
+     you can nest a div inside a grid item or just add class 'flex-jc-ac' on exsisting grid item to reduce the code
+     size. Nesting for now with
      current library is reccommeded.</p>
     <div class="item user-select-none">
      <div class="bg-white p-1r">
@@ -1528,8 +1547,10 @@
   </div>
   <!-- Grid template showcase end -->
  </div>
- <!-- TODO : Experimental Typography rules -->
- <!-- TODO : Footer vairiants -->
+ <!-- TODO: Experimental Typography rules -->
+ <!-- TODO: Add Table Of Content -->
+ <!-- TODO: Footer vairiants -->
+ <!-- TODO: Search Bar - DONE -->
  <script src="script.js"></script>
 </body>
 
