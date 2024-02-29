@@ -1,0 +1,74 @@
+.value1 {
+ background: conic-gradient(var(--success-color) 346deg, var(--Surface0) 14deg);
+}
+
+.value1::before {
+ background-image: url('../assets/96.svg');
+}
+
+.value2 {
+ background: conic-gradient(var(--info-color) 299deg, var(--Surface0) 61deg);
+}
+
+.value2::before {
+ background-image: url('../assets/83.svg');
+}
+
+.value3 {
+ background: conic-gradient(var(--warn-color) 342deg, var(--Surface0) 18deg);
+}
+
+.value3::before {
+ background-image: url('../assets/95.svg');
+}
+
+.value4 {
+ background: conic-gradient(var(--error-color) 324deg, var(--Surface0) 36deg);
+}
+
+.value4::before {
+ background-image: url('../assets/90.svg');
+}
+
+.donut-graph {
+ width: 128px;
+ height: 128px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.donut-graph::before {
+ content: "";
+ width: 120px;
+ height: 120px;
+ background-color: var(--Base);
+ background-repeat: no-repeat;
+ background-position: center;
+ border-radius: 50%;
+ background-size: 60%;
+}
+
+.donut-graph:hover {
+ filter: brightness(1.25);
+}
+
+@media screen and (max-width: 640px) {
+ main>section:first-of-type {
+  height: 100% !important;
+ }
+}
+
+/*
+* {
+ outline: 1px dotted grey;
+}
+*/
+
+.linkbox {
+ overflow-x: auto;
+ max-width: 70%;
+ font-family: monospace;
+ border-radius: 6px;
+}
