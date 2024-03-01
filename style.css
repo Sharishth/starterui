@@ -899,6 +899,7 @@ input[type="checkbox"]:active {
  background-color: white;
  border-radius: 4px;
  transition: all 0.1s ease-in-out;
+ display: block;
 }
 
 .labelCheckbox:active {
