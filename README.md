@@ -7,7 +7,7 @@ Straightforward UI component library and styling rule set using HTML, CSS, and J
 
 Note: _layout.css should be ignored and is only there for formatting documentation of showcase. Accessibilty scores are low due to layout of preview page. Landing page on the otherhand has score of 100._
 
-![Chrome Lighthouse score](lighthousescore.png)
+![Chrome Lighthouse score](score.png)
 
 #### Next target 
   1. Experimental Typography Rules
