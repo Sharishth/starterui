@@ -11,6 +11,7 @@ Note: _layout.css should be ignored and is only there for formatting documentati
 
 #### Next target 
   1. Experimental Typography Rules
+  2. Javascript for tick and search svg.
 
 ## Components Till now (22-02-2024)
 ### Action
