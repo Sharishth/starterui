@@ -761,7 +761,7 @@
  background: rgba(0, 0, 0, 0.342) !important;
  color: rgba(255, 255, 255, 0.884);
  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.185);
- backdrop-filter: blur(2px);
+ backdrop-filter: blur(6px);
 }
 
 .select {
