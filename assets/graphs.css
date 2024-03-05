@@ -1,5 +1,5 @@
 .value1 {
- background: conic-gradient(var(--success-color) 346deg, var(--Surface0) 14deg);
+ background: conic-gradient(var(--success-color) 338deg, var(--Surface0) 14deg);
 }
 
 .value1::before {
@@ -7,7 +7,7 @@
 }
 
 .value2 {
- background: conic-gradient(var(--info-color) 299deg, var(--Surface0) 61deg);
+ background: conic-gradient(var(--info-color) 360deg, var(--Surface0) 61deg);
 }
 
 .value2::before {
@@ -15,7 +15,7 @@
 }
 
 .value3 {
- background: conic-gradient(var(--warn-color) 342deg, var(--Surface0) 18deg);
+ background: conic-gradient(var(--warn-color) 334deg, var(--Surface0) 18deg);
 }
 
 .value3::before {
@@ -23,7 +23,7 @@
 }
 
 .value4 {
- background: conic-gradient(var(--error-color) 324deg, var(--Surface0) 36deg);
+ background: conic-gradient(var(--error-color) 360deg, var(--Surface0) 36deg);
 }
 
 .value4::before {
