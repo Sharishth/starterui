@@ -2205,3 +2205,7 @@ input[type="checkbox"]:checked+.toogle-switch {
 }
 
 /* Grid template rules */
+
+.new-class {
+  columns: 2;
+}
