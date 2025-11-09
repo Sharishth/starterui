@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StarterUI Example - A beautiful showcase of UI components">
+  <title>StarterUI Example - Digital Studio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Sharishth/starterui@main/min.css">
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --dark-bg: #1a1a2e;
+      --card-bg: #16213e;
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: white;
+    }
+
+    .hero-bg {
+      background: var(--primary-gradient);
+      min-height: 100vh;
+    }
+
+    .feature-card {
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .stats-section {
+      background: var(--card-bg);
+      border-radius: 12px;
+    }
+
+    .testimonial-card {
+      max-width: 600px;
+    }
+
+    .pricing-card {
+      transition: all 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+
+<body class="m-0 font-family-system-segoe smooth-scroll thin-scrollbar">
+
+  <!-- Navbar -->
+  <header class="navbar NavResponsive sticky-top" style="background-color: rgba(26, 26, 46, 0.95); backdrop-filter: blur(10px);">
+    <nav class="navWrapper">
+      <div class="navBrand">
+        <h1 class="text-white" style="font-size: 2rem; margin: 0;">✨ Digital Studio</h1>
+      </div>
+      <ul class="navList">
+        <li class="navItems"><a class="text-white" href="#home">Home</a></li>
+        <li class="navItems"><a class="text-white" href="#features">Features</a></li>
+        <li class="navItems"><a class="text-white" href="#portfolio">Portfolio</a></li>
+        <li class="navItems"><a class="text-white" href="#testimonials">Testimonials</a></li>
+        <li class="navItems"><a class="text-white" href="#contact">Contact</a></li>
+      </ul>
+      <div class="navActions">
+        <button onclick="showNavItems(this)" class="text-white" style="background: none; border: none; font-size: 2rem;">☰</button>
+        <ul class="hiddenNavList">
+          <li class="navItems"><a class="text-white" href="#home">Home</a></li>
+          <li class="navItems"><a class="text-white" href="#features">Features</a></li>
+          <li class="navItems"><a class="text-white" href="#portfolio">Portfolio</a></li>
+          <li class="navItems"><a class="text-white" href="#testimonials">Testimonials</a></li>
+          <li class="navItems"><a class="text-white" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg flex-jc-ac-col" style="min-height: 100vh; padding: 4rem 2rem;">
+      <div class="text-center" style="max-width: 800px;">
+        <h1 class="font-size-4-r text-white m-b-0" style="text-shadow: 2px 4px 8px rgba(0,0,0,0.3);">Welcome to Digital Studio</h1>
+        <p class="font-size-1-5-r text-white m-t-2" style="text-shadow: 1px 2px 4px rgba(0,0,0,0.3);">
+          Creating beautiful, modern web experiences with StarterUI framework
+        </p>
+        <div class="flex-jc-ac-row gap-1r m-t-3 flex-wrap">
+          <button class="button bg-white text-black shadow-default ease-in-out-scale">
+            Get Started
+          </button>
+          <button class="button bg-glass-scheme text-white shadow-default ease-in-out-scale">
+            Learn More
+          </button>
+        </div>
+        
+        <!-- Breadcrumb -->
+        <div class="m-t-3">
+          <ul class="bread">
+            <li class="crumbs"><a href="#home" class="text-white">Home</a></li>
+            <li class="crumbs"><a href="#features" class="text-white">Features</a></li>
+            <li class="crumbs"><a href="#portfolio" class="text-white">Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section p-2r m-t-4" style="margin: 2rem auto; max-width: 1200px;">
+      <div class="grid grid-col-auto-auto-auto-auto gap-1r">
+        <div class="text-center">
+          <div class="badge-count font-size-2-r" style="padding: 1rem 2rem;">500+</div>
+          <p class="m-t-1">Projects</p>
+        </div>
+        <div class="text-center">
+          <div class="badge-success font-size-2-r" style="padding: 1rem 2rem;">98%</div>
+          <p class="m-t-1">Satisfaction</p>
+        </div>
+        <div class="text-center">
+          <div class="badge-info font-size-2-r" style="padding: 1rem 2rem;">50+</div>
+          <p class="m-t-1">Clients</p>
+        </div>
+        <div class="text-center">
+          <div class="badge-warn font-size-2-r" style="padding: 1rem 2rem;">24/7</div>
+          <p class="m-t-1">Support</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="p-2r" style="max-width: 1200px; margin: 4rem auto;">
+      <h2 class="text-center font-size-3-r m-b-3">Our Features</h2>
+      
+      <div class="grid grid-col-auto-auto-auto gap-2r">
+        <!-- Feature Card 1 -->
+        <div class="card-text shadow-default feature-card bg-white text-black">
+          <h1>🚀 Fast & Lightweight</h1>
+          <p>Optimized for performance with minimal overhead. Load times that impress your users.</p>
+          <div class="m-t-2">
+            <span class="badge-success">Performance</span>
+            <span class="badge-info m-l-a">Speed</span>
+          </div>
+        </div>
+
+        <!-- Feature Card 2 -->
+        <div class="card-text shadow-default feature-card bg-white text-black">
+          <h1>🎨 Beautiful Design</h1>
+          <p>Modern, clean components that look great out of the box. Customize to match your brand.</p>
+          <div class="m-t-2">
+            <span class="badge-warn">Modern</span>
+            <span class="badge-info m-l-a">Customizable</span>
+          </div>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="card-text shadow-default feature-card bg-white text-black">
+          <h1>📱 Responsive</h1>
+          <p>Works seamlessly across all devices. Mobile-first approach ensures great UX everywhere.</p>
+          <div class="m-t-2">
+            <span class="badge-error">Mobile</span>
+            <span class="badge-success m-l-a">Responsive</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion -->
+      <div class="m-t-4">
+        <h3 class="text-center m-b-2">Frequently Asked Questions</h3>
+        <div class="accordian shadow-default bg-white">
+          <button class="accordian-button" onclick="accexpand(this)">
+            <p class="text-black">What is StarterUI?</p>
+            <p class="text-black">&blacktriangledown;</p>
+          </button>
+          <div class="accordian-content">
+            <p class="text-black">StarterUI is a simple yet sufficient UI library designed to meet your essential needs for building modern websites and web applications.</p>
+          </div>
+        </div>
+        <div class="accordian shadow-default bg-white m-t-1">
+          <button class="accordian-button" onclick="accexpand(this)">
+            <p class="text-black">How do I get started?</p>
+            <p class="text-black">&blacktriangledown;</p>
+          </button>
+          <div class="accordian-content">
+            <p class="text-black">Simply include the CDN link in your HTML file and start using the components. Check the documentation for detailed examples.</p>
+          </div>
+        </div>
+        <div class="accordian shadow-default bg-white m-t-1">
+          <button class="accordian-button" onclick="accexpand(this)">
+            <p class="text-black">Is it free to use?</p>
+            <p class="text-black">&blacktriangledown;</p>
+          </button>
+          <div class="accordian-content">
+            <p class="text-black">Yes! StarterUI is completely free and open source. You can use it in any project without restrictions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Carousel -->
+    <section id="portfolio" class="p-2r" style="max-width: 1200px; margin: 4rem auto;">
+      <h2 class="text-center font-size-3-r m-b-3">Portfolio Showcase</h2>
+      
+      <div class="carousel" style="background: var(--card-bg); padding: 2rem; border-radius: 12px;">
+        <div class="img-slide-previous">
+          <button class="bg-glass-scheme button shadow-default" onclick="carouselPrevElementDiv(this)" style="font-size: 2rem;">
+            &lessdot;
+          </button>
+        </div>
+        <div class="carouselContentContainer">
+          <div class="carouselDiv">
+            <div class="card-text shadow-default bg-white text-black">
+              <h1>E-Commerce Platform</h1>
+              <p>Modern shopping experience with seamless checkout process and responsive design.</p>
+              <div class="m-t-2">
+                <span class="badge-success">React</span>
+                <span class="badge-info">Node.js</span>
+                <span class="badge-warn">MongoDB</span>
+              </div>
+            </div>
+          </div>
+          <div class="carouselDiv">
+            <div class="card-text shadow-default bg-white text-black">
+              <h1>Social Media App</h1>
+              <p>Real-time messaging and content sharing platform with modern UI/UX design.</p>
+              <div class="m-t-2">
+                <span class="badge-success">Vue.js</span>
+                <span class="badge-info">Firebase</span>
+                <span class="badge-warn">WebSocket</span>
+              </div>
+            </div>
+          </div>
+          <div class="carouselDiv">
+            <div class="card-text shadow-default bg-white text-black">
+              <h1>Analytics Dashboard</h1>
+              <p>Comprehensive data visualization and analytics platform for business insights.</p>
+              <div class="m-t-2">
+                <span class="badge-success">Angular</span>
+                <span class="badge-info">Python</span>
+                <span class="badge-warn">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="img-slide-next">
+          <button class="bg-glass-scheme button shadow-default" onclick="carouselNextElementDiv(this)" style="font-size: 2rem;">
+            &gtrdot;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="p-2r" style="max-width: 1200px; margin: 4rem auto;">
+      <h2 class="text-center font-size-3-r m-b-3">Our Services</h2>
+      
+      <div class="tabs shadow-default" style="width: 100%; background: white;">
+        <div class="tabBar" onclick="showTab(event)">
+          <button class="tab tabActive text-black">Web Development</button>
+          <button class="tab text-black">UI/UX Design</button>
+          <button class="tab text-black">Consulting</button>
+        </div>
+        <div class="tabBody">
+          <div class="tabContent">
+            <div class="p-2r">
+              <h3 class="text-black">Web Development</h3>
+              <p class="text-black">We create modern, responsive websites using the latest technologies. Our team specializes in React, Vue, Angular, and vanilla JavaScript.</p>
+              <ul class="text-black">
+                <li>Frontend Development</li>
+                <li>Backend Development</li>
+                <li>Full-Stack Solutions</li>
+                <li>API Integration</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tabContent">
+            <div class="p-2r">
+              <h3 class="text-black">UI/UX Design</h3>
+              <p class="text-black">Beautiful, intuitive interfaces that users love. We focus on user experience and modern design principles.</p>
+              <ul class="text-black">
+                <li>User Interface Design</li>
+                <li>User Experience Research</li>
+                <li>Prototyping</li>
+                <li>Design Systems</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tabContent">
+            <div class="p-2r">
+              <h3 class="text-black">Consulting</h3>
+              <p class="text-black">Expert advice on technology choices, architecture, and best practices. We help you make informed decisions.</p>
+              <ul class="text-black">
+                <li>Technology Consultation</li>
+                <li>Architecture Review</li>
+                <li>Code Reviews</li>
+                <li>Performance Optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="p-2r" style="max-width: 1200px; margin: 4rem auto;">
+      <h2 class="text-center font-size-3-r m-b-3">Our Journey</h2>
+      <div class="card-text shadow-default bg-white">
+        <ul class="timeline">
+          <li>
+            <div class="timelineItems timelineDone">1</div>
+          </li>
+          <li>
+            <div class="timelineItems timelineDone">2</div>
+          </li>
+          <li>
+            <div class="timelineItems timelineActive">3</div>
+          </li>
+          <li>
+            <div class="timelineItems">4</div>
+          </li>
+        </ul>
+        <div class="text-center m-t-2 text-black">
+          <p>Planning → Development → Testing → Launch</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="p-2r" style="max-width: 1200px; margin: 4rem auto;">
+      <h2 class="text-center font-size-3-r m-b-3">What Our Clients Say</h2>
+      
+      <div class="flex-jc-ac-row gap-2r flex-wrap">
+        <div class="card-quote shadow-default testimonial-card bg-white text-black">
+          <div class="card-quote-head">
+            <h1>Amazing Experience</h1>
+          </div>
+          <div class="card-quote-body">
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>&OpenCurlyDoubleQuote;The team delivered exactly what we needed. Professional, fast, and reliable service. Highly recommend!&CloseCurlyDoubleQuote;</p>
+            <p>- Sarah Johnson, CEO</p>
+          </div>
+        </div>
+
+        <div class="card-quote shadow-default testimonial-card bg-white text-black">
+          <div class="card-quote-head">
+            <h1>Outstanding Quality</h1>
+          </div>
+          <div class="card-quote-body">
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>&OpenCurlyDoubleQuote;Best development team we've worked with. They understand our needs and deliver beyond expectations.&CloseCurlyDoubleQuote;</p>
+            <p>- Michael Chen, CTO</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="p-2r" style="max-width: 1200px; margin: 4rem auto;">
+      <h2 class="text-center font-size-3-r m-b-3">Pricing Plans</h2>
+      
+      <div class="grid grid-col-auto-auto-auto gap-2r">
+        <div class="card-text shadow-default pricing-card bg-white text-black text-center">
+          <h1>Basic</h1>
+          <div class="font-size-3-r m-t-2 m-b-2">$99<span style="font-size: 1rem;">/mo</span></div>
+          <ul class="text-left" style="list-style: none; padding: 0;">
+            <li class="m-t-1">✓ 5 Projects</li>
+            <li class="m-t-1">✓ Basic Support</li>
+            <li class="m-t-1">✓ Email Support</li>
+          </ul>
+          <button class="button bg-info-color text-white m-t-2 w-100">Choose Plan</button>
+        </div>
+
+        <div class="card-text shadow-default pricing-card bg-white text-black text-center" style="border: 3px solid var(--info-color);">
+          <div class="badge-success">Popular</div>
+          <h1>Pro</h1>
+          <div class="font-size-3-r m-t-2 m-b-2">$199<span style="font-size: 1rem;">/mo</span></div>
+          <ul class="text-left" style="list-style: none; padding: 0;">
+            <li class="m-t-1">✓ 20 Projects</li>
+            <li class="m-t-1">✓ Priority Support</li>
+            <li class="m-t-1">✓ 24/7 Support</li>
+            <li class="m-t-1">✓ Advanced Features</li>
+          </ul>
+          <button class="button bg-success-color text-white m-t-2 w-100">Choose Plan</button>
+        </div>
+
+        <div class="card-text shadow-default pricing-card bg-white text-black text-center">
+          <h1>Enterprise</h1>
+          <div class="font-size-3-r m-t-2 m-b-2">$499<span style="font-size: 1rem;">/mo</span></div>
+          <ul class="text-left" style="list-style: none; padding: 0;">
+            <li class="m-t-1">✓ Unlimited Projects</li>
+            <li class="m-t-1">✓ Dedicated Support</li>
+            <li class="m-t-1">✓ Custom Solutions</li>
+            <li class="m-t-1">✓ SLA Guarantee</li>
+          </ul>
+          <button class="button bg-warn-color text-black m-t-2 w-100">Choose Plan</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="p-2r" style="max-width: 800px; margin: 4rem auto;">
+      <h2 class="text-center font-size-3-r m-b-3">Get In Touch</h2>
+      
+      <div class="card-text shadow-default bg-white text-black">
+        <form>
+          <div class="m-b-2">
+            <label for="name" class="text-black">Name</label>
+            <input type="text" class="inputtext w-100 m-t-1" id="name" placeholder="Your Name" style="width: 100%; box-sizing: border-box;">
+          </div>
+          
+          <div class="m-b-2">
+            <label for="email" class="text-black">Email</label>
+            <input type="email" class="inputtext w-100 m-t-1" id="email" placeholder="your.email@example.com" style="width: 100%; box-sizing: border-box;">
+          </div>
+          
+          <div class="m-b-2">
+            <label for="service" class="text-black">Service</label>
+            <div class="dropdown m-t-1" style="width: 100%;">
+              <button type="button" onclick="dropdown(this)" aria-valuetext="" class="dropdownValue" style="width: 100%; text-align: left;">
+                Select a Service &blacktriangledown;
+              </button>
+              <div class="options">
+                <button type="button" class="optionitem" onclick="setDropdownValue(this, 'Web Development')">Web Development</button>
+                <button type="button" class="optionitem" onclick="setDropdownValue(this, 'UI/UX Design')">UI/UX Design</button>
+                <button type="button" class="optionitem" onclick="setDropdownValue(this, 'Consulting')">Consulting</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="m-b-2">
+            <label class="text-black">Budget Range</label>
+            <input type="range" name="budget" id="budget" class="m-t-1" style="width: 100%;">
+          </div>
+          
+          <div class="m-b-2">
+            <label class="text-black">Notification Preferences</label>
+            <div class="flex-jc-ac-row gap-1r m-t-1 flex-wrap">
+              <label class="toggle shadow-default">
+                <input type="checkbox" name="email-notifications">
+                <span class="toogle-switch"></span>
+              </label>
+              <span class="text-black">Email Notifications</span>
+            </div>
+          </div>
+          
+          <div class="m-b-2">
+            <label class="text-black">Preferred Contact Method</label>
+            <div class="flex-jc-ac-row gap-1r m-t-1 flex-wrap">
+              <div class="radio-wrapper">
+                <label class="radio ease-in-out-scale">
+                  <input type="radio" name="contact-method" value="email">
+                </label>
+              </div>
+              <span class="text-black">Email</span>
+              
+              <div class="radio-wrapper">
+                <label class="radio ease-in-out-scale">
+                  <input type="radio" name="contact-method" value="phone">
+                </label>
+              </div>
+              <span class="text-black">Phone</span>
+            </div>
+          </div>
+          
+          <button type="submit" class="button bg-info-color text-white w-100 m-t-2" style="width: 100%;">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Code Example -->
+    <section class="p-2r" style="max-width: 1200px; margin: 4rem auto;">
+      <h2 class="text-center font-size-3-r m-b-3">Quick Start Code</h2>
+      <div class="card-text shadow-default bg-white">
+        <pre class="code"><code>&lt;!-- Include StarterUI --&gt;
+&lt;link rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/gh/Sharishth/starterui@main/min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/Sharishth/starterui@main/min.js" defer&gt;&lt;/script&gt;
+
+&lt;!-- Use Components --&gt;
+&lt;button class="button bg-success-color"&gt;Click Me&lt;/button&gt;
+&lt;div class="card-text shadow-default"&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="grid grid-col-auto-auto p-2r gap-1r" style="background-color: var(--card-bg); margin-top: 4rem;">
+    <div class="grid-row-1 grid-col-1 grid-col-span-1 justify-self-start h-100 flex-jc-ac-col">
+      <h1 class="text-white">✨ Digital Studio</h1>
+      <p class="text-white m-t-1">Building the web, one component at a time.</p>
+    </div>
+    <div class="grid-row-1 grid-col-2 flex-jc-ac-col m-l-a m-r-1r">
+      <a class="w-100 p-05-r text-white" href="#home">Home</a>
+      <a class="w-100 p-05-r m-t-2 text-white" href="#features">Features</a>
+      <a class="w-100 p-05-r m-t-2 text-white" href="#portfolio">Portfolio</a>
+      <a class="w-100 p-05-r m-t-2 text-white" href="#testimonials">Testimonials</a>
+    </div>
+    <div class="grid-row-1 grid-col-3 flex-jc-ac-col m-l-a m-r-1r">
+      <a class="w-100 p-05-r text-white" href="#contact">Contact</a>
+      <a class="w-100 p-05-r m-t-2 text-white" href="#">Privacy Policy</a>
+      <a class="w-100 p-05-r m-t-2 text-white" href="#">Terms of Service</a>
+      <a class="w-100 p-05-r m-t-2 text-white" href="#">About Us</a>
+    </div>
+    <div class="grid-row-2 grid-col-1 grid-col-span-3 text-center text-white m-t-2">
+      &copy; 2024 Digital Studio. Built with StarterUI.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/gh/Sharishth/starterui@main/min.js"></script>
+  <script>
+    // Custom dropdown function that doesn't require a specific output element
+    function setDropdownValue(button, value) {
+      const dropdownValue = button.closest('.dropdown').querySelector('.dropdownValue');
+      if (dropdownValue) {
+        dropdownValue.innerHTML = value + ' ▼';
+        dropdownValue.setAttribute('aria-valuetext', String(value));
+        button.closest('.options').style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
+
